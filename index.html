@@ -3,157 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GTA 5 RP - Strona Główna</title>
+  <title>ŁawkaRP - Strona Główna</title>
   <style>
-    body {
-      margin: 0;
-      font-family: 'Arial', sans-serif;
-      background: #121212;
-      color: #f0f0f0;
-    }
-
-    header {
-      background: linear-gradient(90deg, #5865f2, #ffcc00);
-      padding: 40px 20px;
-      text-align: center;
-      color: white;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 3em;
-      text-shadow: 2px 2px #000;
-    }
-
-    header p {
-      font-size: 1.2em;
-      margin-top: 10px;
-    }
-
-    header a {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 15px 30px;
-      background-color: #5865f2;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 10px;
-      transition: background 0.3s;
-    }
-
-    header a:hover {
-      background-color: #4752c4;
-    }
-
-    main {
-      max-width: 1200px;
-      margin: auto;
-      padding: 40px 20px;
-    }
-
-    .section {
-      margin-bottom: 60px;
-    }
-
-    .section h2 {
-      color: #ffcc00;
-      border-bottom: 2px solid #5865f2;
-      padding-bottom: 10px;
-      margin-bottom: 20px;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background-color: #1c1c1c;
-      border: 2px solid #444;
-      border-radius: 15px;
-      padding: 20px;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.5);
-    }
-
-    .card h3 {
-      margin-top: 0;
-      color: #5865f2;
-    }
-
-    .card p {
-      margin: 10px 0 0 0;
-    }
-
-    footer {
-      background-color: #222;
-      color: #aaa;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2em;
-      }
-
-      header p {
-        font-size: 1em;
-      }
-    }
+    body { margin:0; font-family:Arial,sans-serif; background:#121212; color:#f0f0f0; }
+    header { background:linear-gradient(90deg,#5865f2,#ffcc00); padding:40px 20px; text-align:center; color:white; }
+    header h1 { margin:0; font-size:3em; text-shadow:2px 2px #000; }
+    header p { font-size:1.2em; margin-top:10px; }
+    header a { display:inline-block; margin-top:20px; padding:15px 30px; background-color:#5865f2; color:white; text-decoration:none; font-weight:bold; border-radius:10px; transition: background 0.3s; }
+    header a:hover { background-color:#4752c4; }
+    main { max-width:1200px; margin:auto; padding:40px 20px; }
+    .section { margin-bottom:60px; }
+    .section h2 { color:#ffcc00; border-bottom:2px solid #5865f2; padding-bottom:10px; margin-bottom:20px; }
+    .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
+    .card { background:#1c1c1c; border:2px solid #444; border-radius:15px; padding:20px; transition: transform 0.3s, box-shadow 0.3s; text-align:center; cursor:pointer; }
+    .card:hover { transform:translateY(-5px); box-shadow:0 10px 20px rgba(0,0,0,0.5); }
+    .card h3 { margin-top:0; color:#5865f2; }
+    .card p { margin:10px 0 0 0; }
+    footer { background:#222; color:#aaa; text-align:center; padding:20px; margin-top:40px; }
+    @media (max-width:600px){ header h1{font-size:2em;} header p{font-size:1em;} }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>GTA 5 RP - Twój Serwer</h1>
-  <p>Dołącz do naszej społeczności RP i sprawdź informacje o serwerze!</p>
+  <h1>ŁawkaRP</h1>
+  <p>Dołącz do naszej społeczności GTA 5 RP i sprawdź informacje o serwerze!</p>
   <a href="https://discord.gg/GW3MWrpPVS" target="_blank">Dołącz do Discorda</a>
 </header>
 
 <main>
   <div class="section">
-    <h2>O Serwerze</h2>
-    <p>Nasz serwer GTA 5 RP oferuje realistyczną rozgrywkę, handel, pojazdy, broń, nieruchomości i wiele innych. Sprawdź szczegóły poniżej!</p>
-  </div>
-
-  <div class="section">
     <h2>Kategorie</h2>
     <div class="cards">
-      <div class="card">
+      <div class="card" onclick="location.href='bron.html'">
         <h3>Broń</h3>
         <p>Sprawdź ceny i dostępność broni w grze.</p>
       </div>
-      <div class="card">
+      <div class="card" onclick="location.href='narkotyki.html'">
         <h3>Narkotyki</h3>
         <p>Dowiedz się, ile kosztują różne narkotyki i jak je zdobyć.</p>
       </div>
-      <div class="card">
+      <div class="card" onclick="location.href='budynki.html'">
         <h3>Budynki</h3>
         <p>Domy, magazyny i inne nieruchomości dostępne w grze.</p>
       </div>
-      <div class="card">
+      <div class="card" onclick="location.href='pojazdy.html'">
         <h3>Pojazdy</h3>
         <p>Samochody, motocykle, samoloty i helikoptery.</p>
       </div>
     </div>
   </div>
-
-  <div class="section">
-    <h2>Aktualności</h2>
-    <p>Bądź na bieżąco z wydarzeniami na serwerze, update’ami i specjalnymi eventami RP.</p>
-  </div>
 </main>
 
 <footer>
-  &copy; 2025 GTA 5 RP. Wszystkie prawa zastrzeżone.
+  &copy; 2025 ŁawkaRP. Wszystkie prawa zastrzeżone.
 </footer>
 
 </body>
