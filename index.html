@@ -17,6 +17,42 @@ h2 {color:#f1c40f;border-bottom:2px solid #f1c40f;padding-bottom:5px;margin-top:
 p {line-height:1.6;}
 ul {margin-left:20px;}
 footer {text-align:center;padding:15px;background:#1f1f1f;margin-top:20px;font-size:14px;color:#aaa;}
+
+/* Style kart napadów */
+.napad-karta {
+    background:#1f1f1f;
+    border:1px solid #333;
+    border-radius:10px;
+    padding:20px;
+    width:220px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align:center;
+    margin-bottom:20px;
+}
+.napad-karta:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+.napad-btn {
+    display:inline-block;
+    margin-top:10px;
+    padding:10px 15px;
+    background:#7289da;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+    transition: background 0.3s;
+}
+.napad-btn:hover {
+    background:#5b6eae;
+}
+.napady-container {
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+    justify-content:center;
+    margin-top:20px;
+}
 </style>
 </head>
 <body>
@@ -60,6 +96,39 @@ footer {text-align:center;padding:15px;background:#1f1f1f;margin-top:20px;font-s
         <li>Uczestnicz w eventach i misjach, aby zdobywać doświadczenie i reputację.</li>
         <li>Pamiętaj o zasadach RP – staraj się grać realistycznie i szanować innych graczy.</li>
     </ul>
+</section>
+
+<!-- Nowa sekcja Napady -->
+<section>
+    <h2>Napady i akcje specjalne 🔫</h2>
+    <p>Wejdź do świata przestępczego Los Santos! Wybierz napad, zaplanuj strategię i zdobądź bogactwo.</p>
+
+    <div class="napady-container">
+        <div class="napad-karta">
+            <h3>Bank Los Santos</h3>
+            <p>Napad na bank z ekipą 3-5 graczy.</p>
+            <p><strong>Wymagany poziom:</strong> 10</p>
+            <a href="https://discord.gg/GW3MWrpPVS" target="_blank" class="napad-btn">Weź udział</a>
+        </div>
+        <div class="napad-karta">
+            <h3>Sklep jubilerski</h3>
+            <p>Szybki napad na sklep jubilerski w centrum miasta.</p>
+            <p><strong>Wymagany poziom:</strong> 5</p>
+            <a href="https://discord.gg/GW3MWrpPVS" target="_blank" class="napad-btn">Weź udział</a>
+        </div>
+        <div class="napad-karta">
+            <h3>Transport narkotyków</h3>
+            <p>Przechwycenie konwoju z narkotykami.</p>
+            <p><strong>Wymagany poziom:</strong> 8</p>
+            <a href="https://discord.gg/GW3MWrpPVS" target="_blank" class="napad-btn">Weź udział</a>
+        </div>
+        <div class="napad-karta">
+            <h3>Skrytka mafii</h3>
+            <p>Napad na magazyn przestępców z bronią i pieniędzmi.</p>
+            <p><strong>Wymagany poziom:</strong> 12</p>
+            <a href="https://discord.gg/GW3MWrpPVS" target="_blank" class="napad-btn">Weź udział</a>
+        </div>
+    </div>
 </section>
 
 <section>
