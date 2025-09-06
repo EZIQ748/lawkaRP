@@ -121,6 +121,8 @@ function startGame(){
   dealerCards = [deck.pop(), deck.pop()];
   renderCards();
   document.getElementById('message').textContent='';
+  document.querySelector('.hit').disabled = false;
+  document.querySelector('.stand').disabled = false;
 }
 
 function hit(){
@@ -129,7 +131,7 @@ function hit(){
   const playerScore = calculateScore(playerCards);
   if(playerScore>21){
     document.getElementById('message').textContent='Przegrałeś! 💥';
-    disableButtons();
+    endRound();
   }
 }
 
@@ -148,12 +150,16 @@ function stand(){
   else message='Remis! 🤝';
 
   document.getElementById('message').textContent=message;
-  disableButtons();
+  endRound();
 }
 
-function disableButtons(){
+// Funkcja kończąca rundę i resetująca po 3 sekundach
+function endRound(){
   document.querySelector('.hit').disabled = true;
   document.querySelector('.stand').disabled = true;
+  setTimeout(() => {
+    startGame();
+  }, 3000); // 3 sekundy przerwy, potem automatyczny restart
 }
 
 startGame();
