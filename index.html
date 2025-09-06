@@ -23,6 +23,10 @@
   .info-box { background:#1c1c1c; border:2px solid #444; border-radius:15px; padding:20px; }
   .info-box p { margin:10px 0; }
 
+  /* Karty napadów */
+  .napady-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; margin-top:20px; }
+  .napady-grid .info-box h3 { color:#ffcc00; margin-top:0; }
+
   footer { background:#222; color:#aaa; text-align:center; padding:20px; margin-top:40px; }
 
   @media (max-width:600px){ header h1{font-size:2em;} header p{font-size:1em;} nav.categories a{margin:5px 8px; padding:8px 15px;} }
@@ -69,7 +73,21 @@
   <div class="section" id="napady">
     <h2>Napady</h2>
     <div class="info-box">
-      <p>Na ŁawkaRP możesz brać udział w emocjonujących napadach – od małych sklepów, po duże banki i konwoje. Każdy napad wymaga odpowiedniego przygotowania, współpracy z innymi graczami i sprytu, by uniknąć policji. System nagród i ryzyka sprawia, że każdy skok to niezapomniane przeżycie. Pamiętaj – sukces zależy od dobrej organizacji i odgrywania realistycznego RP!</p>
+      <p>Na ŁawkaRP czekają na Ciebie różne napady i skoki – od małych akcji po wielkie i ryzykowne zadania. Każdy z nich wymaga planowania, współpracy i sprytu!</p>
+    </div>
+    <div class="napady-grid">
+      <div class="info-box">
+        <h3>🏦 Napad na bank</h3>
+        <p>Największe wyzwanie – planuj szczegółowo, unikaj policji i zgarnij największą kasę.</p>
+      </div>
+      <div class="info-box">
+        <h3>🏪 Napad na sklep</h3>
+        <p>Szybka akcja dla początkujących – małe ryzyko, mniejsze zyski, ale sporo emocji.</p>
+      </div>
+      <div class="info-box">
+        <h3>🚚 Napad na konwój</h3>
+        <p>Przejęcie transportu z gotówką lub towarem – wymaga drużyny i dobrej organizacji.</p>
+      </div>
     </div>
   </div>
 </main>
