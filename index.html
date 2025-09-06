@@ -6,7 +6,7 @@
   <title>ŁawkaRP - Strona Główna</title>
   <style>
     body { margin:0; font-family:Arial,sans-serif; background:#121212; color:#f0f0f0; }
-    header { background:linear-gradient(90deg,#5865f2,#ffcc00); padding:40px 20px; text-align:center; color:white; }
+    header { background:linear-gradient(90deg,#5865f2,#ffcc00); padding:50px 20px; text-align:center; color:white; }
     header h1 { margin:0; font-size:3em; text-shadow:2px 2px #000; }
     header p { font-size:1.2em; margin-top:10px; }
     header a { display:inline-block; margin-top:20px; padding:15px 30px; background-color:#5865f2; color:white; text-decoration:none; font-weight:bold; border-radius:10px; transition: background 0.3s; }
@@ -19,6 +19,9 @@
     .card:hover { transform:translateY(-5px); box-shadow:0 10px 20px rgba(0,0,0,0.5); }
     .card h3 { margin-top:0; color:#5865f2; }
     .card p { margin:10px 0 0 0; }
+    .features { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
+    .feature { background:#1c1c1c; border:2px solid #444; border-radius:15px; padding:20px; transition: transform 0.3s, box-shadow 0.3s; }
+    .feature h3 { color:#ffcc00; margin-top:0; }
     footer { background:#222; color:#aaa; text-align:center; padding:20px; margin-top:40px; }
     @media (max-width:600px){ header h1{font-size:2em;} header p{font-size:1em;} }
   </style>
@@ -27,11 +30,18 @@
 
 <header>
   <h1>ŁawkaRP</h1>
-  <p>Dołącz do naszej społeczności GTA 5 RP i sprawdź informacje o serwerze!</p>
+  <p>Dołącz do naszej społeczności GTA 5 RP i przeżyj niezapomniane przygody!</p>
   <a href="https://discord.gg/GW3MWrpPVS" target="_blank">Dołącz do Discorda</a>
 </header>
 
 <main>
+  <!-- O serwerze -->
+  <div class="section">
+    <h2>O Serwerze</h2>
+    <p>ŁawkaRP to serwer GTA 5 RP, który oferuje realistyczną rozgrywkę, handel, pojazdy, broń, nieruchomości i mnóstwo eventów dla graczy. Nasza społeczność jest przyjazna, a administracja dba o płynność i uczciwość gry. Każdy gracz znajdzie tutaj coś dla siebie – od spokojnej kariery po ryzykowne akcje w świecie RP.</p>
+  </div>
+
+  <!-- Kategorie -->
   <div class="section">
     <h2>Kategorie</h2>
     <div class="cards">
@@ -52,6 +62,35 @@
         <p>Samochody, motocykle, samoloty i helikoptery.</p>
       </div>
     </div>
+  </div>
+
+  <!-- Dlaczego warto grać -->
+  <div class="section">
+    <h2>Dlaczego warto grać na ŁawkaRP?</h2>
+    <div class="features">
+      <div class="feature">
+        <h3>Realistyczne RP</h3>
+        <p>Autentyczne doświadczenia, realistyczne interakcje i pełen immersion.</p>
+      </div>
+      <div class="feature">
+        <h3>Aktywna społeczność</h3>
+        <p>Przyjazna społeczność i wsparcie administracji na każdym kroku.</p>
+      </div>
+      <div class="feature">
+        <h3>Eventy i wyzwania</h3>
+        <p>Specjalne wydarzenia i misje, które wprowadzają ciekawą rozgrywkę.</p>
+      </div>
+      <div class="feature">
+        <h3>Rozbudowany świat</h3>
+        <p>Pojazdy, budynki, broń i narkotyki – wszystko w pełni zbalansowane.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Aktualności -->
+  <div class="section">
+    <h2>Aktualności</h2>
+    <p>Śledź nas na Discordzie i bądź na bieżąco z wydarzeniami, aktualizacjami serwera i specjalnymi eventami.</p>
   </div>
 </main>
 
