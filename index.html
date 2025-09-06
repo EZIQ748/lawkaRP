@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ŁawkaRP - Strona Główna</title>
+  <title>ŁawkaRP - Wszystko w jednym</title>
   <style>
     body { margin:0; font-family:Arial,sans-serif; background:#121212; color:#f0f0f0; }
     header { background:linear-gradient(90deg,#5865f2,#ffcc00); padding:50px 20px; text-align:center; color:white; }
@@ -11,6 +11,7 @@
     header p { font-size:1.2em; margin-top:10px; }
     header a { display:inline-block; margin-top:20px; padding:15px 30px; background-color:#5865f2; color:white; text-decoration:none; font-weight:bold; border-radius:10px; transition: background 0.3s; }
     header a:hover { background-color:#4752c4; }
+
     main { max-width:1200px; margin:auto; padding:40px 20px; }
     .section { margin-bottom:60px; }
     .section h2 { color:#ffcc00; border-bottom:2px solid #5865f2; padding-bottom:10px; margin-bottom:20px; }
@@ -19,10 +20,18 @@
     .card:hover { transform:translateY(-5px); box-shadow:0 10px 20px rgba(0,0,0,0.5); }
     .card h3 { margin-top:0; color:#5865f2; }
     .card p { margin:10px 0 0 0; }
+
+    table { width:100%; border-collapse:collapse; margin-bottom:30px; }
+    th, td { padding:10px; border:1px solid #555; text-align:left; }
+    th { background:#444; }
+    tr:nth-child(even){ background:#1c1c1c; }
+
     .features { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
     .feature { background:#1c1c1c; border:2px solid #444; border-radius:15px; padding:20px; transition: transform 0.3s, box-shadow 0.3s; }
     .feature h3 { color:#ffcc00; margin-top:0; }
+
     footer { background:#222; color:#aaa; text-align:center; padding:20px; margin-top:40px; }
+
     @media (max-width:600px){ header h1{font-size:2em;} header p{font-size:1em;} }
   </style>
 </head>
@@ -30,7 +39,7 @@
 
 <header>
   <h1>ŁawkaRP</h1>
-  <p>Dołącz do naszej społeczności GTA 5 RP i przeżyj niezapomniane przygody!</p>
+  <p>Dołącz do naszej społeczności GTA 5 RP i sprawdź wszystko, co potrzebne do gry!</p>
   <a href="https://discord.gg/GW3MWrpPVS" target="_blank">Dołącz do Discorda</a>
 </header>
 
@@ -38,52 +47,85 @@
   <!-- O serwerze -->
   <div class="section">
     <h2>O Serwerze</h2>
-    <p>ŁawkaRP to serwer GTA 5 RP, który oferuje realistyczną rozgrywkę, handel, pojazdy, broń, nieruchomości i mnóstwo eventów dla graczy. Nasza społeczność jest przyjazna, a administracja dba o płynność i uczciwość gry. Każdy gracz znajdzie tutaj coś dla siebie – od spokojnej kariery po ryzykowne akcje w świecie RP.</p>
+    <p>ŁawkaRP to serwer GTA 5 RP, który oferuje realistyczną rozgrywkę, handel, pojazdy, broń, nieruchomości i mnóstwo eventów. Nasza społeczność jest przyjazna, a administracja dba o płynność i uczciwość gry. Każdy gracz znajdzie tutaj coś dla siebie – od spokojnej kariery po ryzykowne akcje w świecie RP.</p>
   </div>
 
   <!-- Kategorie -->
   <div class="section">
     <h2>Kategorie</h2>
     <div class="cards">
-      <div class="card" onclick="location.href='bron.html'">
+      <div class="card" onclick="document.getElementById('bron').scrollIntoView({behavior:'smooth'})">
         <h3>Broń</h3>
         <p>Sprawdź ceny i dostępność broni w grze.</p>
       </div>
-      <div class="card" onclick="location.href='narkotyki.html'">
+      <div class="card" onclick="document.getElementById('narkotyki').scrollIntoView({behavior:'smooth'})">
         <h3>Narkotyki</h3>
         <p>Dowiedz się, ile kosztują różne narkotyki i jak je zdobyć.</p>
       </div>
-      <div class="card" onclick="location.href='budynki.html'">
+      <div class="card" onclick="document.getElementById('budynki').scrollIntoView({behavior:'smooth'})">
         <h3>Budynki</h3>
         <p>Domy, magazyny i inne nieruchomości dostępne w grze.</p>
       </div>
-      <div class="card" onclick="location.href='pojazdy.html'">
+      <div class="card" onclick="document.getElementById('pojazdy').scrollIntoView({behavior:'smooth'})">
         <h3>Pojazdy</h3>
         <p>Samochody, motocykle, samoloty i helikoptery.</p>
       </div>
     </div>
   </div>
 
+  <!-- Broń -->
+  <div class="section" id="bron">
+    <h2>Broń</h2>
+    <table>
+      <tr><th>Nazwa</th><th>Cena</th><th>Opis</th></tr>
+      <tr><td>Pistolet</td><td>500$</td><td>Podstawowa broń do walki na bliski dystans</td></tr>
+      <tr><td>Karabin</td><td>1500$</td><td>Średni dystans, wysoka siła rażenia</td></tr>
+      <tr><td>Shotgun</td><td>1200$</td><td>Krótki dystans, bardzo silny</td></tr>
+    </table>
+  </div>
+
+  <!-- Narkotyki -->
+  <div class="section" id="narkotyki">
+    <h2>Narkotyki</h2>
+    <table>
+      <tr><th>Nazwa</th><th>Cena</th><th>Opis</th></tr>
+      <tr><td>Marihuana</td><td>200$</td><td>Podstawowy narkotyk</td></tr>
+      <tr><td>Kokaina</td><td>1000$</td><td>Wysoka wartość, niebezpieczna</td></tr>
+      <tr><td>Meth</td><td>1500$</td><td>Nielegalny narkotyk, wysoka cena</td></tr>
+    </table>
+  </div>
+
+  <!-- Budynki -->
+  <div class="section" id="budynki">
+    <h2>Budynki</h2>
+    <table>
+      <tr><th>Nazwa</th><th>Cena</th><th>Opis</th></tr>
+      <tr><td>Dom</td><td>50000$</td><td>Miejsce zamieszkania</td></tr>
+      <tr><td>Magazyn</td><td>100000$</td><td>Przechowywanie przedmiotów</td></tr>
+      <tr><td>Biuro</td><td>150000$</td><td>Miejsce pracy lub działalności</td></tr>
+    </table>
+  </div>
+
+  <!-- Pojazdy -->
+  <div class="section" id="pojazdy">
+    <h2>Pojazdy</h2>
+    <table>
+      <tr><th>Nazwa</th><th>Cena</th><th>Opis</th></tr>
+      <tr><td>Samochód sportowy</td><td>150000$</td><td>Szybki pojazd do ucieczek</td></tr>
+      <tr><td>Motocykl</td><td>50000$</td><td>Zwinny i szybki</td></tr>
+      <tr><td>Samolot Jet</td><td>500000$</td><td>Szybki samolot do podróży</td></tr>
+      <tr><td>Helikopter transportowy</td><td>300000$</td><td>Transport osób i towarów</td></tr>
+    </table>
+  </div>
+
   <!-- Dlaczego warto grać -->
   <div class="section">
     <h2>Dlaczego warto grać na ŁawkaRP?</h2>
     <div class="features">
-      <div class="feature">
-        <h3>Realistyczne RP</h3>
-        <p>Autentyczne doświadczenia, realistyczne interakcje i pełen immersion.</p>
-      </div>
-      <div class="feature">
-        <h3>Aktywna społeczność</h3>
-        <p>Przyjazna społeczność i wsparcie administracji na każdym kroku.</p>
-      </div>
-      <div class="feature">
-        <h3>Eventy i wyzwania</h3>
-        <p>Specjalne wydarzenia i misje, które wprowadzają ciekawą rozgrywkę.</p>
-      </div>
-      <div class="feature">
-        <h3>Rozbudowany świat</h3>
-        <p>Pojazdy, budynki, broń i narkotyki – wszystko w pełni zbalansowane.</p>
-      </div>
+      <div class="feature"><h3>Realistyczne RP</h3><p>Autentyczne doświadczenia, realistyczne interakcje i pełen immersion.</p></div>
+      <div class="feature"><h3>Aktywna społeczność</h3><p>Przyjazna społeczność i wsparcie administracji na każdym kroku.</p></div>
+      <div class="feature"><h3>Eventy i wyzwania</h3><p>Specjalne wydarzenia i misje wprowadzające ciekawą rozgrywkę.</p></div>
+      <div class="feature"><h3>Rozbudowany świat</h3><p>Pojazdy, budynki, broń i narkotyki – wszystko w pełni zbalansowane.</p></div>
     </div>
   </div>
 
@@ -92,6 +134,7 @@
     <h2>Aktualności</h2>
     <p>Śledź nas na Discordzie i bądź na bieżąco z wydarzeniami, aktualizacjami serwera i specjalnymi eventami.</p>
   </div>
+
 </main>
 
 <footer>
