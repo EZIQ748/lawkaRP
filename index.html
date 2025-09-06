@@ -3,148 +3,86 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ŁawkaRP - Strona Główna</title>
+<title>ŁawkaRP - Kasyno</title>
 <style>
   body { margin:0; font-family:Arial,sans-serif; background:#121212; color:#f0f0f0; }
-  header { background:linear-gradient(90deg,#5865f2,#ffcc00); padding:50px 20px; text-align:center; color:white; }
-  header h1 { margin:0; font-size:3em; text-shadow:2px 2px #000; }
-  header p { font-size:1.2em; margin-top:10px; }
-  header a.button { display:inline-block; margin-top:20px; padding:15px 30px; background-color:#5865f2; color:white; text-decoration:none; font-weight:bold; border-radius:10px; transition: background 0.3s; }
-  header a.button:hover { background-color:#4752c4; }
+  header { background:linear-gradient(90deg,#ffcc00,#5865f2); padding:40px 20px; text-align:center; color:white; }
+  header h1 { margin:0; font-size:2.5em; text-shadow:2px 2px #000; }
+  header p { margin-top:10px; font-size:1.2em; }
 
-  nav { background:#1c1c1c; padding:15px; text-align:center; position:sticky; top:0; z-index:1000; }
-  nav a { color:#f0f0f0; text-decoration:none; margin:0 15px; font-weight:bold; }
-  nav a:hover { color:#ffcc00; }
-
-  main { max-width:1200px; margin:auto; padding:40px 20px; }
-  .section { margin-bottom:60px; }
+  main { max-width:1000px; margin:auto; padding:40px 20px; }
+  .section { margin-bottom:50px; }
   .section h2 { color:#ffcc00; border-bottom:2px solid #5865f2; padding-bottom:10px; margin-bottom:20px; }
 
-  .cards, .napady-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
-  .card, .info-box { background:#1c1c1c; border:2px solid #444; border-radius:15px; padding:20px; transition: transform 0.3s, box-shadow 0.3s; text-align:center; }
-  .card:hover, .info-box:hover { transform:translateY(-5px); box-shadow:0 10px 20px rgba(0,0,0,0.5); }
-  .card h3, .info-box h3 { margin-top:0; color:#5865f2; }
-  .info-box h3 { color:#ffcc00; }
+  .game-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
+  .card { background:#1c1c1c; border:2px solid #444; border-radius:15px; padding:20px; transition: transform 0.3s, box-shadow 0.3s; text-align:center; }
+  .card:hover { transform:translateY(-5px); box-shadow:0 10px 20px rgba(0,0,0,0.5); }
+  .card h3 { margin-top:0; color:#ffcc00; }
+  .card p { font-size:0.95em; }
+
+  a.back { display:inline-block; margin-top:20px; padding:10px 20px; background:#5865f2; color:white; border-radius:10px; text-decoration:none; font-weight:bold; }
+  a.back:hover { background:#4752c4; }
 
   footer { background:#222; color:#aaa; text-align:center; padding:20px; margin-top:40px; }
-
-  @media (max-width:600px){ header h1{font-size:2em;} header p{font-size:1em;} }
 </style>
 </head>
 <body>
 
 <header>
-  <h1>ŁawkaRP</h1>
-  <p>Dołącz do naszej społeczności GTA 5 RP i przeżyj niezapomniane przygody w realistycznym świecie ŁawkaRP!</p>
-  <a href="https://discord.gg/GW3MWrpPVS" target="_blank" class="button">Dołącz do Discorda</a>
+  <h1>Kasyno w ŁawkaRP 🎰</h1>
+  <p>Miejsce, gdzie możesz pomnożyć swój majątek... albo go stracić.</p>
+  <a href="index.html" class="back">⬅ Powrót na stronę główną</a>
 </header>
 
-<nav>
-  <a href="#info">O serwerze</a>
-  <a href="#kategorie">Kategorie</a>
-  <a href="#dlaczego">Dlaczego warto?</a>
-  <a href="#ekonomia">Ekonomia</a>
-  <a href="#napady">Napady</a>
-  <a href="#kontakt">Kontakt</a>
-</nav>
-
 <main>
-  <!-- O serwerze -->
-  <div class="section" id="info">
-    <h2>O Serwerze</h2>
-    <p>ŁawkaRP to serwer GTA 5 RP stworzony z myślą o graczach szukających realistycznej i wciągającej rozgrywki. 
-    Możesz wcielić się w różne role – od spokojnego obywatela, po ryzykowne misje kryminalne. 
-    Oferujemy rozbudowany świat, w którym każdy gracz znajdzie coś dla siebie.</p>
+  <!-- O kasynie -->
+  <div class="section">
+    <h2>Jak działa kasyno?</h2>
+    <p>Kasyno to serce hazardu w ŁawkaRP. Tutaj gracze mogą próbować swojego szczęścia w różnych grach losowych. 
+    Wystarczy wejść, usiąść przy stole lub automacie i postawić zakład. 
+    Pamiętaj – szczęście sprzyja odważnym, ale ryzyko jest zawsze realne!</p>
   </div>
 
-  <!-- Kategorie -->
-  <div class="section" id="kategorie">
-    <h2>Kategorie</h2>
-    <div class="cards">
-      <a href="bron.html" class="card" style="text-decoration:none; color:inherit;">
-        <h3>Broń</h3>
-        <p>Sprawdź dostępne rodzaje broni i ich zastosowanie.</p>
-      </a>
-      <a href="narkotyki.html" class="card" style="text-decoration:none; color:inherit;">
-        <h3>Narkotyki</h3>
-        <p>Dowiedz się, jakie narkotyki są dostępne i jak je zdobyć.</p>
-      </a>
-      <a href="budynki.html" class="card" style="text-decoration:none; color:inherit;">
-        <h3>Budynki</h3>
-        <p>Domy, magazyny i inne nieruchomości w grze.</p>
-      </a>
-      <a href="pojazdy.html" class="card" style="text-decoration:none; color:inherit;">
-        <h3>Pojazdy</h3>
-        <p>Samochody, motocykle, samoloty i helikoptery.</p>
-      </a>
-      <a href="pancerz.html" class="card" style="text-decoration:none; color:inherit;">
-        <h3>Pancerz</h3>
-        <p>Kamizelki kuloodporne i ochrona osobista.</p>
-      </a>
-    </div>
-  </div>
-
-  <!-- Dlaczego warto grać -->
-  <div class="section" id="dlaczego">
-    <h2>Dlaczego warto grać na ŁawkaRP?</h2>
-    <div class="cards">
-      <div class="card"><h3>Realistyczne RP</h3><p>Autentyczne doświadczenia i realistyczne interakcje.</p></div>
-      <div class="card"><h3>Aktywna społeczność</h3><p>Przyjazna społeczność i wsparcie administracji.</p></div>
-      <div class="card"><h3>Eventy i wyzwania</h3><p>Specjalne wydarzenia i misje urozmaicające grę.</p></div>
-      <div class="card"><h3>Bogata rozgrywka</h3><p>Realistyczna ekonomia i różnorodne role do odegrania.</p></div>
-    </div>
-  </div>
-
-  <!-- Ekonomia -->
-  <div class="section" id="ekonomia">
-    <h2>Ekonomia</h2>
-    <div class="cards">
+  <!-- Gry dostępne w kasynie -->
+  <div class="section">
+    <h2>Dostępne gry</h2>
+    <div class="game-cards">
       <div class="card">
-        <h3>🎰 Kasyno</h3>
-        <p>Spróbuj szczęścia w ruletce, blackjacku i automatach. Możesz pomnożyć swój majątek albo wszystko stracić!</p>
+        <h3>🎲 Ruletka</h3>
+        <p>Postaw na kolor, liczbę lub zakres i zakręć kołem. Prosta zasada – wielka adrenalina!</p>
       </div>
       <div class="card">
-        <h3>🏦 System bankowy</h3>
-        <p>Zakładaj konta, zaciągaj kredyty, wpłacaj i wypłacaj pieniądze. Prawdziwa ekonomia RP.</p>
+        <h3>🃏 Blackjack</h3>
+        <p>Klasyczna gra karciana. Zbliż się do 21 punktów, ale nie przekrocz! Pokonaj krupiera i zgarnij wygraną.</p>
       </div>
       <div class="card">
-        <h3>💼 Praca i biznes</h3>
-        <p>Zostań przedsiębiorcą, pracuj legalnie lub prowadź nielegalne interesy – wybór należy do Ciebie.</p>
+        <h3>🎰 Automaty</h3>
+        <p>Wrzuć żeton, zakręć i sprawdź, czy wpadnie szczęśliwa kombinacja. Jackpot czeka!</p>
       </div>
       <div class="card">
-        <h3>💰 Handel</h3>
-        <p>Kupuj, sprzedawaj i wymieniaj towary z innymi graczami. Dynamiczny rynek zależny od działań społeczności.</p>
+        <h3>🏇 Zakłady sportowe</h3>
+        <p>Obstawiaj wyścigi konne i inne wydarzenia. Twoja wiedza i odrobina szczęścia mogą dać Ci wielkie wygrane.</p>
       </div>
     </div>
   </div>
 
-  <!-- Napady -->
-  <div class="section" id="napady">
-    <h2>Napady</h2>
-    <div class="info-box">
-      <p>Na ŁawkaRP czekają na Ciebie różne napady i skoki – od małych akcji po wielkie i ryzykowne zadania. 
-      Każdy z nich wymaga planowania, współpracy i sprytu!</p>
-    </div>
-    <div class="napady-grid">
-      <a href="napad-bank.html" class="info-box" style="display:block; text-decoration:none; color:inherit;">
-        <h3>🏦 Napad na bank</h3>
-        <p>Największe wyzwanie – planuj szczegółowo, unikaj policji i zgarnij największą kasę.</p>
-      </a>
-      <a href="napad-sklep.html" class="info-box" style="display:block; text-decoration:none; color:inherit;">
-        <h3>🏪 Napad na sklep</h3>
-        <p>Szybka akcja dla początkujących – małe ryzyko, mniejsze zyski, ale sporo emocji.</p>
-      </a>
-      <a href="napad-konwoj.html" class="info-box" style="display:block; text-decoration:none; color:inherit;">
-        <h3>🚚 Napad na konwój</h3>
-        <p>Przejęcie transportu z gotówką lub towarem – wymaga drużyny i dobrej organizacji.</p>
-      </a>
-    </div>
+  <!-- Zasady -->
+  <div class="section">
+    <h2>Zasady hazardu</h2>
+    <ul>
+      <li>Gracze mogą obstawiać tylko za zdobyte w grze pieniądze.</li>
+      <li>Nie ma gwarancji wygranej – graj odpowiedzialnie.</li>
+      <li>Kasyno ma zawsze przewagę – nie licz, że zawsze będziesz na plusie.</li>
+      <li>Próby oszustwa kończą się banem z serwera.</li>
+    </ul>
   </div>
 
-  <!-- Kontakt -->
-  <div class="section" id="kontakt">
-    <h2>Kontakt</h2>
-    <p>Dołącz do naszego <a href="https://discord.gg/GW3MWrpPVS" target="_blank" style="color:#ffcc00;">Discorda</a>, aby być na bieżąco z wydarzeniami i uzyskać pomoc od administracji.</p>
+  <!-- Czy warto? -->
+  <div class="section">
+    <h2>Czy warto zagrać?</h2>
+    <p>Kasyno to świetne miejsce na spędzenie wolnego czasu i dodanie emocji do rozgrywki. 
+    Możesz wygrać fortunę lub wszystko stracić – wybór należy do Ciebie. 
+    Wchodzisz do kasyna? 🎲</p>
   </div>
 </main>
 
