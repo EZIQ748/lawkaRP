@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ŁawkaRP - Blackjack</title>
+<style>
+  body { margin:0; font-family:Arial,sans-serif; background:#121212; color:#f0f0f0; text-align:center; }
+  header { background:linear-gradient(90deg,#ffcc00,#5865f2); padding:30px; color:white; }
+  header h1 { margin:0; font-size:2em; text-shadow:1px 1px #000; }
+  main { padding:30px; }
+  .cards { display:flex; justify-content:center; flex-wrap:wrap; gap:10px; margin:20px 0; }
+  .card { background:#1c1c1c; border:2px solid #444; border-radius:10px; padding:15px; width:60px; height:90px; display:flex; align-items:center; justify-content:center; font-size:1.2em; color:#ffcc00; }
+  button { margin:10px; padding:10px 20px; font-size:1em; border:none; border-radius:10px; cursor:pointer; font-weight:bold; }
+  button:hover { opacity:0.8; }
+  .hit { background:#5865f2; color:white; }
+  .stand { background:#ffcc00; color:#121212; }
+  .back { display:block; margin:20px auto; padding:10px 20px; background:#5865f2; color:white; border-radius:10px; text-decoration:none; width:200px; font-weight:bold; }
+  #message { font-size:1.2em; margin-top:20px; color:#ffcc00; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Blackjack w ŁawkaRP 🎲</h1>
+</header>
+
+<main>
+  <div>
+    <h2>Twoje karty:</h2>
+    <div id="player-cards" class="cards"></div>
+    <p>Wartość: <span id="player-score">0</span></p>
+  </div>
+
+  <div>
+    <h2>Karty krupiera:</h2>
+    <div id="dealer-cards" class="cards"></div>
+    <p>Wartość: <span id="dealer-score">0</span></p>
+  </div>
+
+  <button class="hit" onclick="hit()">Hit</button>
+  <button class="stand" onclick="stand()">Stand</button>
+
+  <p id="message"></p>
+
+  <a href="index.html" class="back">⬅ Powrót na stronę główną</a>
+</main>
+
+<script>
+const suits = ['♠','♥','♦','♣'];
+const values = ['2','3','4','5','6','7','8','9','10','J','Q','K','A'];
+
+let deck = [];
+let playerCards = [];
+let dealerCards = [];
+
+function createDeck(){
+  deck = [];
+  for(let s of suits){
+    for(let v of values){
+      deck.push({suit:s, value:v});
+    }
+  }
+  shuffle(deck);
+}
+
+function shuffle(array){
+  for(let i=array.length-1;i>0;i--){
+    const j = Math.floor(Math.random()*(i+1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
+function cardValue(card){
+  if(['J','Q','K'].includes(card.value)) return 10;
+  if(card.value==='A') return 11;
+  return parseInt(card.value);
+}
+
+function calculateScore(cards){
+  let score = 0;
+  let aces = 0;
+  for(let c of cards){
+    score += cardValue(c);
+    if(c.value==='A') aces++;
+  }
+  while(score>21 && aces>0){
+    score -= 10;
+    aces--;
+  }
+  return score;
+}
+
+function renderCards(){
+  const playerDiv = document.getElementById('player-cards');
+  const dealerDiv = document.getElementById('dealer-cards');
+  playerDiv.innerHTML = '';
+  dealerDiv.innerHTML = '';
+
+  for(let c of playerCards){
+    const div = document.createElement('div');
+    div.className='card';
+    div.textContent=c.value+c.suit;
+    playerDiv.appendChild(div);
+  }
+
+  for(let c of dealerCards){
+    const div = document.createElement('div');
+    div.className='card';
+    div.textContent=c.value+c.suit;
+    dealerDiv.appendChild(div);
+  }
+
+  document.getElementById('player-score').textContent = calculateScore(playerCards);
+  document.getElementById('dealer-score').textContent = calculateScore(dealerCards);
+}
+
+function startGame(){
+  createDeck();
+  playerCards = [deck.pop(), deck.pop()];
+  dealerCards = [deck.pop(), deck.pop()];
+  renderCards();
+  document.getElementById('message').textContent='';
+}
+
+function hit(){
+  playerCards.push(deck.pop());
+  renderCards();
+  const playerScore = calculateScore(playerCards);
+  if(playerScore>21){
+    document.getElementById('message').textContent='Przegrałeś! 💥';
+    disableButtons();
+  }
+}
+
+function stand(){
+  let dealerScore = calculateScore(dealerCards);
+  while(dealerScore<17){
+    dealerCards.push(deck.pop());
+    dealerScore = calculateScore(dealerCards);
+  }
+  renderCards();
+  const playerScore = calculateScore(playerCards);
+
+  let message='';
+  if(dealerScore>21 || playerScore>dealerScore) message='Wygrałeś! 🎉';
+  else if(playerScore<dealerScore) message='Przegrałeś! 💥';
+  else message='Remis! 🤝';
+
+  document.getElementById('message').textContent=message;
+  disableButtons();
+}
+
+function disableButtons(){
+  document.querySelector('.hit').disabled = true;
+  document.querySelector('.stand').disabled = true;
+}
+
+startGame();
+</script>
+
+</body>
+</html>
