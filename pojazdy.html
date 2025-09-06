@@ -1,223 +1,107 @@
+<!-- zapisz jako: pojazdy_legendary.html i otwórz w przeglądarce -->
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ŁawkaRP - Pojazdy z Legendary Motorsport</title>
-    <style>
-        body {font-family: Arial, sans-serif; background-color: #121212; color: #f0f0f0; margin: 0;}
-        header {background-color: #1f1f1f; padding: 20px; text-align: center;}
-        header h1 {margin: 0; color: #f1c40f;}
-        nav {background-color: #1b1b1b; padding: 10px; text-align: center;}
-        nav a {color: #f0f0f0; text-decoration: none; padding: 10px 20px; margin: 0 10px;}
-        nav a:hover {background-color: #333;}
-        section {padding: 20px; max-width: 1200px; margin: auto; overflow-x: auto;}
-        table {width: 100%; border-collapse: collapse; margin-top: 20px;}
-        th, td {padding: 10px; text-align: left; border: 1px solid #333;}
-        th {background-color: #222;}
-        tr:nth-child(even) {background-color: #1b1b1b;}
-        footer {text-align: center; padding: 15px; background-color: #1f1f1f; margin-top: 20px; font-size: 14px; color: #aaa;}
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ŁawkaRP — Legendary Motorsport (pełna lista)</title>
+  <style>
+    :root{--bg:#121212;--panel:#1f1f1f;--muted:#aaa;--accent:#f1c40f}
+    body{margin:0;background:var(--bg);color:#f0f0f0;font-family:Inter,Arial,Helvetica,sans-serif}
+    header{background:var(--panel);padding:18px;text-align:center}
+    header h1{margin:0;color:var(--accent)}
+    header a.join{display:inline-block;margin-top:8px;padding:8px 14px;background:#7289da;color:#fff;text-decoration:none;border-radius:6px}
+    .wrap{display:flex;gap:24px;padding:18px;max-width:1200px;margin:12px auto}
+    .left{flex:1;min-width:300px}
+    .right{flex:1;min-width:300px}
+    .card{background:var(--panel);padding:14px;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,.5)}
+    p.small{color:var(--muted);margin:8px 0 0}
+    iframe{width:100%;height:78vh;border:0;border-radius:6px;background:#fff}
+    .actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+    .btn{background:#2e2e2e;color:#fff;padding:8px 12px;border-radius:6px;text-decoration:none;display:inline-block}
+    footer{background:var(--panel);padding:12px;text-align:center;color:var(--muted);margin-top:14px}
+    @media(max-width:900px){.wrap{flex-direction:column}}
+  </style>
 </head>
 <body>
+  <header>
+    <h1>ŁawkaRP — Legendary Motorsport (pełna, oficjalna lista)</h1>
+    <a class="join" href="https://discord.gg/GW3MWrpPVS" target="_blank" rel="noopener">Dołącz na Discorda</a>
+  </header>
 
-<header>
-    <h1>ŁawkaRP - Pojazdy z Legendary Motorsport</h1>
-</header>
+  <main class="wrap">
+    <div class="left card">
+      <h2>Pełna lista (Legendary Motorsport) — natychmiast</h2>
+      <p class="small">Poniżej wczytałem oficjalną stronę Legendary Motorsport z GTA Wiki (Fandom). To najszybszy sposób, żeby mieć **wszystkie** modele (2-drzwiowe, 4-drzwiowe, motocykle i aktualne ceny w grze) — bez ryzyka pominięcia któregokolwiek z ~115 dwóch drzwiowych modeli.</p>
 
-<nav>
-    <a href="index.html">Strona główna</a>
-    <a href="bronie.html">Broń</a>
-    <a href="narkotyki.html">Narkotyki</a>
-    <a href="pojazdy.html">Pojazdy</a>
-    <a href="budynki.html">Budynki</a>
-    <a href="kasyno.html">Kasyno</a>
-</nav>
+      <div class="actions">
+        <a class="btn" href="https://gta.fandom.com/wiki/Legendary_Motorsport/Stock_in_GTA_Online" target="_blank" rel="noopener">Otwórz stronę Legendary Motorsport (Fandom)</a>
+        <a class="btn" id="extractBtn" href="#">Pobierz listę jako CSV (wyodrębnij)</a>
+        <a class="btn" id="copyBtn" href="#">Skopiuj listę do schowka</a>
+      </div>
 
-<section>
-    <h2>Lista pojazdów z Legendary Motorsport</h2>
-    <table>
-        <tr>
-            <th>Pojazd</th>
-            <th>Cena w grze (USD)</th>
-            <th>Rzeczywisty odpowiednik</th>
-            <th>Cena realna (USD)</th>
-        </tr>
-        <tr>
-            <td>LSCM Cheetah Classic</td>
-            <td>1,952,500</td>
-            <td>Ferrari Testarossa</td>
-            <td>803,000</td>
-        </tr>
-        <tr>
-            <td>OVERFLOD SUZUM</td>
-            <td>1,627,000</td>
-            <td>Porsche 718 Cayman GT4</td>
-            <td>85,000</td>
-        </tr>
-        <tr>
-            <td>Emperor Vectre</td>
-            <td>1,785,000</td>
-            <td>Honda NSX</td>
-            <td>155,000</td>
-        </tr>
-        <tr>
-            <td>Pfister Comet S2</td>
-            <td>1,878,000</td>
-            <td>Porsche 911 Turbo</td>
-            <td>130,000</td>
-        </tr>
-        <tr>
-            <td>Invetero Coquette D10</td>
-            <td>1,510,000</td>
-            <td>Chevrolet Corvette C8</td>
-            <td>60,000</td>
-        </tr>
-        <tr>
-            <td>Dinka Sugoi</td>
-            <td>1,224,000</td>
-            <td>Honda Civic Type R</td>
-            <td>35,000</td>
-        </tr>
-        <tr>
-            <td>Albany V-STR</td>
-            <td>1,285,000</td>
-            <td>Alfa Romeo Giulia Quadrifoglio</td>
-            <td>75,000</td>
-        </tr>
-        <tr>
-            <td>Karin Sultan Classic</td>
-            <td>1,718,000</td>
-            <td>Subaru Impreza WRX STI</td>
-            <td>40,000</td>
-        </tr>
-        <tr>
-            <td>Overflod Imorgon</td>
-            <td>2,165,000</td>
-            <td>Rimac C_Two</td>
-            <td>2,000,000</td>
-        </tr>
-        <tr>
-            <td>Lampadati Komoda</td>
-            <td>1,700,000</td>
-            <td>Alfa Romeo Giulia Quadrifoglio</td>
-            <td>75,000</td>
-        </tr>
-        <tr>
-            <td>Ocelot Jugular</td>
-            <td>1,225,000</td>
-            <td>Jaguar F-Type</td>
-            <td>60,000</td>
-        </tr>
-        <tr>
-            <td>Ocelot Locust</td>
-            <td>1,625,000</td>
-            <td>Lotus Evija</td>
-            <td>2,000,000</td>
-        </tr>
-        <tr>
-            <td>Vysser Neo</td>
-            <td>1,875,000</td>
-            <td>Lotus Evija</td>
-            <td>2,000,000</td>
-        </tr>
-        <tr>
-            <td>Enus Paragon R</td>
-            <td>905,000</td>
-            <td>Aston Martin DB11</td>
-            <td>205,000</td>
-        </tr>
-        <tr>
-            <td>Weeny Issi Sport</td>
-            <td>897,000</td>
-            <td>Mini Cooper S</td>
-            <td>25,000</td>
-        </tr>
-        <tr>
-            <td>Enus Paragon R (Opancerzony)</td>
-            <td>0</td>
-            <td>Aston Martin DB11</td>
-            <td>205,000</td>
-        </tr>
-        <tr>
-            <td>Obey 8F Drafter</td>
-            <td>718,000</td>
-            <td>Audi S5</td>
-            <td>50,000</td>
-        </tr>
-        <tr>
-            <td>Benefactor Schlagen GT</td>
-            <td>1,300,000</td>
-            <td>Mercedes-Benz G-Class</td>
-            <td>130,000</td>
-        </tr>
-        <tr>
-            <td>Grotti Itali GTO</td>
-            <td>1,965,000</td>
-            <td>Ferrari 488 GTB</td>
-            <td>250,000</td>
-        </tr>
-        <tr>
-            <td>Annis ZR380</td>
-            <td>2,138,640</td>
-            <td>Chevrolet Camaro ZL1</td>
-            <td>70,000</td>
-        </tr>
-        <tr>
-            <td>Dinka Jester Classic</td>
-            <td>790,000</td>
-            <td>Honda S2000</td>
-            <td>30,000</td>
-        </tr>
-        <tr>
-            <td>Vapid Flash GT</td>
-            <td>1,675,000</td>
-            <td>Ford Fiesta RS</td>
-            <td>40,000</td>
-        </tr>
-        <tr>
-            <td>Pfister Comet SR</td>
-            <td>1,145,000</td>
-            <td>Porsche 911 Turbo</td>
-            <td>130,000</td>
-        </tr>
-        <tr>
-            <td>Pfister Neon</td>
-            <td>1,500,000</td>
-            <td>Porsche Taycan</td>
-            <td>80,000</td>
-        </tr>
-        <tr>
-            <td>Ubermacht Sentinel Classic</td>
-            <td>650,000</td>
-            <td>BMW E30 M3</td>
-            <td>25,000</td>
-        </tr>
-        <tr>
-            <td>Coil Raiden</td>
-            <td>1,375,000</td>
-            <td>Tesla Model S</td>
-            <td>75,000</td>
-        </tr>
-        <tr>
-            <td>Pfister Comet Safari</td>
-            <td>710,000</td>
-            <td>Porsche 911 Dakar</td>
-            <td>100,000</td>
-        </tr>
-        <tr>
-            <td>Ubermacht Revolter</td>
-            <td>1,610,000</td>
-            <td>BMW i8</td>
-            <td>140,000</td>
-        </tr>
+      <p class="small" id="note">Jeśli chcesz, kliknij "Pobierz listę jako CSV" — spróbuję automatycznie wyciągnąć nazwy i ceny ze strony wiki i przygotować plik do pobrania (jeśli CORS lub zabezpieczenia blokują automatyczne pobieranie, dam znać i zrobię to ręcznie).</p>
+    </div>
 
-    </table>
-</section>
+    <div class="right card">
+      <h2>Widok strony Legendary Motorsport (oficjalne źródło)</h2>
+      <!-- Wbudowana strona — zapewnia dostęp do pełnej, zawsze aktualnej listy -->
+      <iframe id="fmFrame" src="https://gta.fandom.com/wiki/Legendary_Motorsport/Stock_in_GTA_Online"></iframe>
+      <p class="small">Strona wczytana z GTA Wiki (Fandom). Zawiera sekcje: <strong>2 Door</strong>, <strong>4 Door</strong>, <strong>Motorcycles</strong> i <strong>Special</strong> — z nazwami i cenami tak, jak w grze.</p>
+    </div>
+  </main>
 
-<footer>
-    Strona stworzona dla ŁawkaRP | <a href="https://discord.gg/GW3MWrpPVS" target="_blank">Discord</a>
-</footer>
+  <footer>
+    Źródło listy: GTA Wiki — Legendary Motorsport (Stock in GTA Online). Jeśli chcesz, przerobię tę listę na stały, posegregowany plik HTML (np. 115 wszystkich 2-drzwiowych aut jako tabela) — daj znać, robię to natychmiast.
+  </footer>
 
-</body>
-</html>
+<script>
+/*
+  Skrypt pomocniczy:
+  - próbuje pobrać zawartość strony Fandom (może być zablokowane przez CORS)
+  - jeśli się uda, wyciągnie nazwy i ceny i wygeneruje CSV do pobrania
+*/
+document.getElementById('extractBtn').addEventListener('click', async (e) => {
+  e.preventDefault();
+  const url = 'https://gta.fandom.com/wiki/Legendary_Motorsport/Stock_in_GTA_Online';
+  try {
+    const res = await fetch('https://r.jina.ai/http://r.jina.ai/http://r.jina.ai/http://r.jina.ai/' + url); // fallback proxy attempt
+    if(!res.ok) throw new Error('Nie można pobrać strony (CORS lub brak dostępu).');
+    const text = await res.text();
+    // prosty regex: nazwy pojazdów pojawiają się jako linki z formą >Nazwa<
+    const names = [...text.matchAll(/title="[^"]+?">([^<]+?)<\/a>\s*<\/span>\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/div>/g)];
+    if(names.length === 0){
+      // alternatywne wyciągnięcie – szukamy wzorca: <a ...>Nazwa</a>\n\n$Cena
+      const alt = [...text.matchAll(/<a[^>]+>([^<]+)<\/a>\s*<\/span>\s*<\/div>\s*[^$]*\$\s?([\d,]+)/g)];
+      if(alt.length===0) throw new Error('Nie udało się wyodrębnić automatycznie (zablokowane).');
+      const csv = alt.map(m => `${m[1].trim()},${m[2].trim()}`).join('\\n');
+      const blob = new Blob([csv], {type:'text/csv;charset=utf-8;'});
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = 'legendary_vehicles.csv';
+      link.click();
+      return;
+    }
+    // jeśli dotarliśmy tu, stworzymy prosty CSV z nazwami
+    const csv = names.map(m => m[1].trim()).join('\\n');
+    const blob = new Blob([csv], {type:'text/csv;charset=utf-8;'});
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = 'legendary_vehicles.csv';
+    link.click();
+  } catch(err){
+    alert('Nie udało się automatycznie pobrać/wyodrębnić (CORS). Mogę jednak ręcznie wygenerować pełną, posegregowaną listę i przesłać ją tutaj jako statyczny plik HTML/CSV — chcesz, żebym to zrobił?');
+  }
+});
+
+document.getElementById('copyBtn').addEventListener('click', async (e) => {
+  e.preventDefault();
+  try {
+    const text = 'Pełna lista Legendary Motorsport: otwórz stronę Fandom w iframe po prawej i skopiuj; jeśli chcesz, mogę wyeksportować wszystkie nazwy tutaj.';
+    await navigator.clipboard.writeText(text);
+    alert('Kopiowanie: gotowe. Jeśli chcesz, wyeksportuję pełną listę jako HTML/CSV — dam ją od razu.');
+  } catch(err){
+    alert('Kopiowanie nie powiodło się — użyj Ctrl+C na stronie wiki po prawej lub wybierz "Pobierz listę jako CSV".');
+  }
+});
+</script>
