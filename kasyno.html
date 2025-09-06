@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ŁawkaRP - Kasyno</title>
+<style>
+  body { margin:0; font-family:Arial,sans-serif; background:#121212; color:#f0f0f0; }
+  header { background:linear-gradient(90deg,#ffcc00,#5865f2); padding:40px 20px; text-align:center; color:white; }
+  header h1 { margin:0; font-size:2.5em; text-shadow:2px 2px #000; }
+  header p { margin-top:10px; font-size:1.2em; }
+
+  main { max-width:1000px; margin:auto; padding:40px 20px; }
+  .section { margin-bottom:50px; }
+  .section h2 { color:#ffcc00; border-bottom:2px solid #5865f2; padding-bottom:10px; margin-bottom:20px; }
+
+  .game-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
+  .card { background:#1c1c1c; border:2px solid #444; border-radius:15px; padding:20px; transition: transform 0.3s, box-shadow 0.3s; text-align:center; }
+  .card:hover { transform:translateY(-5px); box-shadow:0 10px 20px rgba(0,0,0,0.5); }
+  .card h3 { margin-top:0; color:#ffcc00; }
+  .card p { font-size:0.95em; }
+
+  a.back { display:inline-block; margin-top:20px; padding:10px 20px; background:#5865f2; color:white; border-radius:10px; text-decoration:none; font-weight:bold; }
+  a.back:hover { background:#4752c4; }
+
+  footer { background:#222; color:#aaa; text-align:center; padding:20px; margin-top:40px; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Kasyno w ŁawkaRP 🎰</h1>
+  <p>Miejsce, gdzie możesz pomnożyć swój majątek... albo go stracić!</p>
+  <a href="index.html" class="back">⬅ Powrót na stronę główną</a>
+</header>
+
+<main>
+  <!-- O kasynie -->
+  <div class="section">
+    <h2>Jak działa kasyno?</h2>
+    <p>Kasyno to serce hazardu w ŁawkaRP. Tutaj gracze mogą próbować swojego szczęścia w różnych grach losowych. 
+    Wystarczy wejść, usiąść przy stole lub automacie i postawić zakład. 
+    Pamiętaj – szczęście sprzyja odważnym, ale ryzyko jest zawsze realne!</p>
+  </div>
+
+  <!-- Gry dostępne w kasynie -->
+  <div class="section">
+    <h2>Dostępne gry</h2>
+    <div class="game-cards">
+      <div class="card">
+        <h3>🎲 Ruletka</h3>
+        <p>Postaw na kolor, liczbę lub zakres i zakręć kołem. Prosta zasada – wielka adrenalina!</p>
+      </div>
+      <div class="card">
+        <h3>🃏 Blackjack</h3>
+        <p>Klasyczna gra karciana. Zbliż się do 21 punktów, ale nie przekrocz! Pokonaj krupiera i zgarnij wygraną.</p>
+      </div>
+      <div class="card">
+        <h3>🎰 Automaty</h3>
+        <p>Wrzuć żeton, zakręć i sprawdź, czy wpadnie szczęśliwa kombinacja. Jackpot czeka!</p>
+      </div>
+      <div class="card">
+        <h3>🏇 Zakłady sportowe</h3>
+        <p>Obstawiaj wyścigi konne i inne wydarzenia. Twoja wiedza i odrobina szczęścia mogą dać Ci wielkie wygrane.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Zasady -->
+  <div class="section">
+    <h2>Zasady hazardu</h2>
+    <ul>
+      <li>Gracze mogą obstawiać tylko za zdobyte w grze pieniądze.</li>
+      <li>Nie ma gwarancji wygranej – graj odpowiedzialnie.</li>
+      <li>Kasyno ma zawsze przewagę – nie licz, że zawsze będziesz na plusie.</li>
+      <li>Próby oszustwa kończą się banem z serwera.</li>
+    </ul>
+  </div>
+
+  <!-- Czy warto? -->
+  <div class="section">
+    <h2>Czy warto zagrać?</h2>
+    <p>Kasyno to świetne miejsce na spędzenie wolnego czasu i dodanie emocji do rozgrywki. 
+    Możesz wygrać fortunę lub wszystko stracić – wybór należy do Ciebie. 
+    Wchodzisz do kasyna? 🎲</p>
+  </div>
+</main>
+
+<footer>
+  &copy; 2025 ŁawkaRP. Wszystkie prawa zastrzeżone.
+</footer>
+
+</body>
+</html>
