@@ -17,6 +17,11 @@ h2 {color:#f1c40f;border-bottom:2px solid #f1c40f;padding-bottom:5px;margin-top:
 p {line-height:1.6;}
 ul {margin-left:20px;}
 footer {text-align:center;padding:15px;background:#1f1f1f;margin-top:20px;font-size:14px;color:#aaa;}
+/* Wyszukiwarka */
+#searchContainer {text-align:center; padding:15px; background:#1b1b1b;}
+#searchInput {padding:10px; width:50%; max-width:400px; border-radius:5px; border:none;}
+#searchResults a {display:block; color:#f0f0f0; margin:5px 0; text-decoration:none;}
+#searchResults a:hover {color:#f1c40f;}
 </style>
 </head>
 <body>
@@ -26,7 +31,6 @@ footer {text-align:center;padding:15px;background:#1f1f1f;margin-top:20px;font-s
     <a href="https://discord.gg/GW3MWrpPVS" target="_blank">Dołącz na Discorda</a>
 </header>
 
-<!-- Menu z nową zakładką Opancerzenie -->
 <nav>
     <a href="index.html">Strona główna</a>
     <a href="bronie.html">Broń</a>
@@ -36,6 +40,12 @@ footer {text-align:center;padding:15px;background:#1f1f1f;margin-top:20px;font-s
     <a href="kasyno.html">Kasyno</a>
     <a href="opancerzenie.html">Opancerzenie</a>
 </nav>
+
+<!-- Wyszukiwarka -->
+<div id="searchContainer">
+    <input type="text" id="searchInput" placeholder="Wyszukaj...">
+    <div id="searchResults"></div>
+</div>
 
 <section>
     <h2>Witamy na ŁawkaRP!</h2>
@@ -73,6 +83,35 @@ footer {text-align:center;padding:15px;background:#1f1f1f;margin-top:20px;font-s
 <footer>
     Strona stworzona dla ŁawkaRP | <a href="https://discord.gg/GW3MWrpPVS" target="_blank">Discord</a>
 </footer>
+
+<script>
+// Prosta wyszukiwarka
+const data = [
+    {title:"Broń", link:"bronie.html"},
+    {title:"Narkotyki", link:"narkotyki.html"},
+    {title:"Pojazdy", link:"pojazdy.html"},
+    {title:"Budynki", link:"budynki.html"},
+    {title:"Kasyno", link:"kasyno.html"},
+    {title:"Opancerzenie", link:"opancerzenie.html"}
+];
+
+const input = document.getElementById("searchInput");
+const resultsDiv = document.getElementById("searchResults");
+
+input.addEventListener("input", function() {
+    const query = input.value.toLowerCase();
+    resultsDiv.innerHTML = "";
+    if(query === "") return;
+    
+    const results = data.filter(item => item.title.toLowerCase().includes(query));
+    results.forEach(item => {
+        const a = document.createElement("a");
+        a.href = item.link;
+        a.textContent = item.title;
+        resultsDiv.appendChild(a);
+    });
+});
+</script>
 
 </body>
 </html>
