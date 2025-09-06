@@ -22,6 +22,10 @@ footer {text-align:center;padding:15px;background:#1f1f1f;margin-top:20px;font-s
 #searchInput {padding:10px; width:50%; max-width:400px; border-radius:5px; border:none;}
 #searchResults a {display:block; color:#f0f0f0; margin:5px 0; text-decoration:none;}
 #searchResults a:hover {color:#f1c40f;}
+/* Przycisk więcej */
+#moreBtn {padding:10px 20px; font-size:18px; border:none; border-radius:5px; background:#7289da; color:white; cursor:pointer;}
+#moreContent a {display:block; color:#f0f0f0; text-decoration:none; margin:5px 0;}
+#moreContent a:hover {color:#f1c40f;}
 </style>
 </head>
 <body>
@@ -40,6 +44,16 @@ footer {text-align:center;padding:15px;background:#1f1f1f;margin-top:20px;font-s
     <a href="kasyno.html">Kasyno</a>
     <a href="opancerzenie.html">Opancerzenie</a>
 </nav>
+
+<!-- Przycisk "więcej" -->
+<div style="text-align:center; padding:15px; background:#1b1b1b;">
+    <button id="moreBtn">...</button>
+    <div id="moreContent" style="display:none; margin-top:10px;">
+        <a href="frakcje.html">Frakcje</a>
+        <a href="eventy.html">Eventy</a>
+        <a href="inne.html">Inne</a>
+    </div>
+</div>
 
 <!-- Wyszukiwarka -->
 <div id="searchContainer">
@@ -85,7 +99,7 @@ footer {text-align:center;padding:15px;background:#1f1f1f;margin-top:20px;font-s
 </footer>
 
 <script>
-// Prosta wyszukiwarka
+// Wyszukiwarka
 const data = [
     {title:"Broń", link:"bronie.html"},
     {title:"Narkotyki", link:"narkotyki.html"},
@@ -110,6 +124,18 @@ input.addEventListener("input", function() {
         a.textContent = item.title;
         resultsDiv.appendChild(a);
     });
+});
+
+// Przycisk "więcej"
+const btn = document.getElementById("moreBtn");
+const moreContent = document.getElementById("moreContent");
+
+btn.addEventListener("click", () => {
+    if(moreContent.style.display === "none") {
+        moreContent.style.display = "block";
+    } else {
+        moreContent.style.display = "none";
+    }
 });
 </script>
 
