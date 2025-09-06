@@ -17,15 +17,6 @@ h2 {color:#f1c40f;border-bottom:2px solid #f1c40f;padding-bottom:5px;margin-top:
 p {line-height:1.6;}
 ul {margin-left:20px;}
 footer {text-align:center;padding:15px;background:#1f1f1f;margin-top:20px;font-size:14px;color:#aaa;}
-/* Wyszukiwarka */
-#searchContainer {text-align:center; padding:15px; background:#1b1b1b;}
-#searchInput {padding:10px; width:50%; max-width:400px; border-radius:5px; border:none;}
-#searchResults a {display:block; color:#f0f0f0; margin:5px 0; text-decoration:none;}
-#searchResults a:hover {color:#f1c40f;}
-/* Przycisk więcej */
-#moreBtn {padding:10px 20px; font-size:18px; border:none; border-radius:5px; background:#7289da; color:white; cursor:pointer;}
-#moreContent a {display:block; color:#f0f0f0; text-decoration:none; margin:5px 0;}
-#moreContent a:hover {color:#f1c40f;}
 </style>
 </head>
 <body>
@@ -42,24 +33,7 @@ footer {text-align:center;padding:15px;background:#1f1f1f;margin-top:20px;font-s
     <a href="pojazdy.html">Pojazdy</a>
     <a href="budynki.html">Budynki</a>
     <a href="kasyno.html">Kasyno</a>
-    <a href="opancerzenie.html">Opancerzenie</a>
 </nav>
-
-<!-- Przycisk "więcej" -->
-<div style="text-align:center; padding:15px; background:#1b1b1b;">
-    <button id="moreBtn">...</button>
-    <div id="moreContent" style="display:none; margin-top:10px;">
-        <a href="frakcje.html">Frakcje</a>
-        <a href="eventy.html">Eventy</a>
-        <a href="inne.html">Inne</a>
-    </div>
-</div>
-
-<!-- Wyszukiwarka -->
-<div id="searchContainer">
-    <input type="text" id="searchInput" placeholder="Wyszukaj...">
-    <div id="searchResults"></div>
-</div>
 
 <section>
     <h2>Witamy na ŁawkaRP!</h2>
@@ -69,12 +43,11 @@ footer {text-align:center;padding:15px;background:#1f1f1f;margin-top:20px;font-s
 <section>
     <h2>Co oferuje nasz serwer?</h2>
     <ul>
-        <li><strong>Handel i ekonomia:</strong> kupuj i sprzedawaj pojazdy, broń, narkotyki, budynki oraz opancerzenie.</li>
+        <li><strong>Handel i ekonomia:</strong> kupuj i sprzedawaj pojazdy, broń, narkotyki i budynki.</li>
         <li><strong>Różnorodne role:</strong> od policjanta, przez przestępcę, po biznesmena.</li>
         <li><strong>Misje i eventy:</strong> specjalne misje, napady, rajdy i wydarzenia społecznościowe.</li>
         <li><strong>Pojazdy:</strong> szeroki wybór samochodów, helikopterów i samolotów.</li>
         <li><strong>Budynki:</strong> domy, magazyny, sklepy – wszystko dla rozwoju Twojej postaci.</li>
-        <li><strong>Opancerzenie:</strong> kamizelki ochronne dla graczy, które zwiększają przeżywalność w RP.</li>
         <li><strong>Kasyno:</strong> miejsce do zabawy z ruletką, slotami i rzutem kostką.</li>
     </ul>
 </section>
@@ -83,7 +56,7 @@ footer {text-align:center;padding:15px;background:#1f1f1f;margin-top:20px;font-s
     <h2>Porady dla nowych graczy</h2>
     <ul>
         <li>Dołącz najpierw na Discord, aby być na bieżąco z wydarzeniami i zasadami serwera.</li>
-        <li>Zaczynaj powoli – inwestuj w pojazdy, broń i opancerzenie odpowiednio do doświadczenia i pieniędzy.</li>
+        <li>Zaczynaj powoli – inwestuj w pojazdy i broń odpowiednio do doświadczenia i pieniędzy.</li>
         <li>Uczestnicz w eventach i misjach, aby zdobywać doświadczenie i reputację.</li>
         <li>Pamiętaj o zasadach RP – staraj się grać realistycznie i szanować innych graczy.</li>
     </ul>
@@ -97,47 +70,6 @@ footer {text-align:center;padding:15px;background:#1f1f1f;margin-top:20px;font-s
 <footer>
     Strona stworzona dla ŁawkaRP | <a href="https://discord.gg/GW3MWrpPVS" target="_blank">Discord</a>
 </footer>
-
-<script>
-// Wyszukiwarka
-const data = [
-    {title:"Broń", link:"bronie.html"},
-    {title:"Narkotyki", link:"narkotyki.html"},
-    {title:"Pojazdy", link:"pojazdy.html"},
-    {title:"Budynki", link:"budynki.html"},
-    {title:"Kasyno", link:"kasyno.html"},
-    {title:"Opancerzenie", link:"opancerzenie.html"}
-];
-
-const input = document.getElementById("searchInput");
-const resultsDiv = document.getElementById("searchResults");
-
-input.addEventListener("input", function() {
-    const query = input.value.toLowerCase();
-    resultsDiv.innerHTML = "";
-    if(query === "") return;
-    
-    const results = data.filter(item => item.title.toLowerCase().includes(query));
-    results.forEach(item => {
-        const a = document.createElement("a");
-        a.href = item.link;
-        a.textContent = item.title;
-        resultsDiv.appendChild(a);
-    });
-});
-
-// Przycisk "więcej"
-const btn = document.getElementById("moreBtn");
-const moreContent = document.getElementById("moreContent");
-
-btn.addEventListener("click", () => {
-    if(moreContent.style.display === "none") {
-        moreContent.style.display = "block";
-    } else {
-        moreContent.style.display = "none";
-    }
-});
-</script>
 
 </body>
 </html>
