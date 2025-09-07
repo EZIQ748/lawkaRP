@@ -18,25 +18,31 @@
   .section { margin-bottom:60px; }
   .section h2 { color:#ffcc00; border-bottom:2px solid #5865f2; padding-bottom:10px; margin-bottom:20px; }
 
-  .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
-  .card { background:#1c1c1c; border:2px solid #444; border-radius:15px; padding:20px; transition: transform 0.3s, box-shadow 0.3s; text-align:center; }
-  .card:hover { transform:translateY(-5px); box-shadow:0 10px 20px rgba(0,0,0,0.5); }
-  .card h3 { margin-top:0; color:#5865f2; }
+  table { width:100%; border-collapse:collapse; margin-top:20px; }
+  th, td { border:1px solid #444; padding:10px; text-align:center; }
+  th { background:#5865f2; color:white; }
+  tr:nth-child(even) { background:#1c1c1c; }
+  tr:nth-child(odd) { background:#181818; }
+  tr:hover { background:#333; }
 
   footer { background:#222; color:#aaa; text-align:center; padding:20px; margin-top:40px; }
 
-  @media (max-width:600px){ header h1{font-size:2em;} header p{font-size:1em;} }
+  @media (max-width:600px){
+    header h1{font-size:2em;} 
+    header p{font-size:1em;}
+    table{font-size:0.8em;}
+  }
 </style>
 </head>
 <body>
 
 <header>
   <h1>Broń - ŁawkaRP</h1>
-  <p>Sprawdź dostępne rodzaje broni i ich zastosowanie na serwerze.</p>
+  <p>Sprawdź dostępne rodzaje broni i ich ceny na serwerze.</p>
 </header>
 
 <nav>
-  <a href="index.html"> Strona główna</a>
+  <a href="index.html">Strona główna</a>
   <a href="narkotyki.html">Narkotyki</a>
   <a href="budynki.html">Budynki</a>
   <a href="pojazdy.html">Pojazdy</a>
@@ -44,38 +50,67 @@
 </nav>
 
 <main>
-  <!-- Informacje -->
+  <!-- Lista broni -->
   <div class="section">
-    <h2>System broni na serwerze</h2>
-    <p>Na ŁawkaRP dostępne są różne rodzaje broni, które możesz zdobyć legalnie lub nielegalnie. 
-    Broń jest istotnym elementem rozgrywki – od samoobrony, przez napady, aż po wojny gangów.</p>
-  </div>
-
-  <!-- Kategorie broni -->
-  <div class="section">
-    <h2>Rodzaje broni</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Pistolety</h3>
-        <p>Lekkie i poręczne, idealne do samoobrony i szybkich akcji.</p>
-      </div>
-      <div class="card">
-        <h3>Karabiny</h3>
-        <p>Skuteczne w walce na średnim i dalekim dystansie.</p>
-      </div>
-      <div class="card">
-        <h3>Snajperki</h3>
-        <p>Doskonałe do cichej eliminacji celów z dużej odległości.</p>
-      </div>
-      <div class="card">
-        <h3>Shotguny</h3>
-        <p>Mocne obrażenia na krótkim dystansie – idealne do szturmów.</p>
-      </div>
-      <div class="card">
-        <h3>Broń biała</h3>
-        <p>Noże, maczety i inne – ciche, ale śmiertelne narzędzia walki.</p>
-      </div>
-    </div>
+    <h2>Lista broni i ceny</h2>
+    <table>
+      <tr>
+        <th>Broń</th>
+        <th>Legal</th>
+        <th>Nielegal</th>
+      </tr>
+      <tr><td>Zwykły pistolet</td><td>5k</td><td>9k</td></tr>
+      <tr><td>Pistolet bojowy</td><td>4k</td><td>8k</td></tr>
+      <tr><td>Pistolet .50</td><td>15k</td><td>-</td></tr>
+      <tr><td>Pukawka</td><td>2.5k</td><td>6k</td></tr>
+      <tr><td>Ciężki pistolet</td><td>10k</td><td>15k</td></tr>
+      <tr><td>Pistolet vintage</td><td>8.5k</td><td>14k</td></tr>
+      <tr><td>Pistolet ceramiczny</td><td>8k</td><td>16k</td></tr>
+      <tr><td>Pistolet wyborowy</td><td>10k</td><td>20k</td></tr>
+      <tr><td>Ciężki rewolwer</td><td>15k</td><td>30k</td></tr>
+      <tr><td>Pistolet perico</td><td>12k</td><td>20k</td></tr>
+      <tr><td>Pistolet ppanc.</td><td>15k</td><td>29k</td></tr>
+      <tr><td>Kompaktowe SMG</td><td>20k</td><td>39k</td></tr>
+      <tr><td>Pistolet maszynowy</td><td>19k</td><td>35k</td></tr>
+      <tr><td>Mini SMG</td><td>19k</td><td>34k</td></tr>
+      <tr><td>SMG</td><td>24k</td><td>40k</td></tr>
+      <tr><td>Szturmowy SMG</td><td>35k</td><td>50k</td></tr>
+      <tr><td>PDW</td><td>39k</td><td>49k</td></tr>
+      <tr><td>Karabin maszynowy</td><td>-</td><td>60k</td></tr>
+      <tr><td>Bojowy karabin maszynowy</td><td>50k</td><td>70k</td></tr>
+      <tr><td>Gusenberg</td><td>35k</td><td>50k</td></tr>
+      <tr><td>Karabin szturmowy</td><td>40k</td><td>60k</td></tr>
+      <tr><td>Karabinek</td><td>25k</td><td>40k</td></tr>
+      <tr><td>Zaawansowany karabin</td><td>26k</td><td>42k</td></tr>
+      <tr><td>Karabinek specjalny</td><td>30k</td><td>55k</td></tr>
+      <tr><td>Karabinek bezkolbowy</td><td>32k</td><td>57k</td></tr>
+      <tr><td>Karabin kompaktowy</td><td>25k</td><td>45k</td></tr>
+      <tr><td>Karabin wojskowy</td><td>45k</td><td>65k</td></tr>
+      <tr><td>Ciężki karabin</td><td>47k</td><td>67k</td></tr>
+      <tr><td>Karabinek wojskowy</td><td>44k</td><td>67k</td></tr>
+      <tr><td>Karabin snajperski</td><td>30k</td><td>50k</td></tr>
+      <tr><td>Ciężki karabin snajperski</td><td>40k</td><td>65k</td></tr>
+      <tr><td>Karabin wyborowy</td><td>29k</td><td>50k</td></tr>
+      <tr><td>Karabin precyzyjny</td><td>35k</td><td>55k</td></tr>
+      <tr><td>Strzelba tłokowa</td><td>35k</td><td>50k</td></tr>
+      <tr><td>Obrzyn</td><td>19k</td><td>38k</td></tr>
+      <tr><td>Strzelba bezkolbowa</td><td>25k</td><td>55k</td></tr>
+      <tr><td>Strzelba szturmowa</td><td>30k</td><td>50k</td></tr>
+      <tr><td>Muszkiet</td><td>10k</td><td>20k</td></tr>
+      <tr><td>Ciężka strzelba</td><td>15k</td><td>35k</td></tr>
+      <tr><td>Dwururka</td><td>9k</td><td>20k</td></tr>
+      <tr><td>Strzelba automatyczna</td><td>14k</td><td>25k</td></tr>
+      <tr><td>Strzelba bojowa</td><td>25k</td><td>50k</td></tr>
+      <tr><td>Granatnik</td><td>-</td><td>350k</td></tr>
+      <tr><td>Rakietnica</td><td>-</td><td>1m</td></tr>
+      <tr><td>Minigun</td><td>-</td><td>1.2m</td></tr>
+      <tr><td>Wyrzutnia namierzająca</td><td>-</td><td>1.5m</td></tr>
+      <tr><td>Granat</td><td>-</td><td>15k</td></tr>
+      <tr><td>Bomba przylepna</td><td>-</td><td>25k</td></tr>
+      <tr><td>Mina zbliżeniowa</td><td>-</td><td>20k</td></tr>
+      <tr><td>Rurobomba</td><td>-</td><td>19k</td></tr>
+      <tr><td>Gaz łzawiący</td><td>-</td><td>5k</td></tr>
+    </table>
   </div>
 </main>
 
