@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ŁawkaRP - Broń</title>
+<style>
+  body { margin:0; font-family:Arial,sans-serif; background:#121212; color:#f0f0f0; }
+  header { background:linear-gradient(90deg,#5865f2,#ffcc00); padding:40px 20px; text-align:center; color:white; }
+  header h1 { margin:0; font-size:2.5em; text-shadow:2px 2px #000; }
+  header p { font-size:1.2em; margin-top:10px; }
+
+  nav { background:#1c1c1c; padding:15px; text-align:center; }
+  nav a { color:#f0f0f0; text-decoration:none; margin:0 15px; font-weight:bold; }
+  nav a:hover { color:#ffcc00; }
+
+  main { max-width:1200px; margin:auto; padding:40px 20px; }
+  .section { margin-bottom:60px; }
+  .section h2 { color:#ffcc00; border-bottom:2px solid #5865f2; padding-bottom:10px; margin-bottom:20px; }
+
+  .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
+  .card { background:#1c1c1c; border:2px solid #444; border-radius:15px; padding:20px; transition: transform 0.3s, box-shadow 0.3s; text-align:center; }
+  .card:hover { transform:translateY(-5px); box-shadow:0 10px 20px rgba(0,0,0,0.5); }
+  .card h3 { margin-top:0; color:#5865f2; }
+
+  footer { background:#222; color:#aaa; text-align:center; padding:20px; margin-top:40px; }
+
+  @media (max-width:600px){ header h1{font-size:2em;} header p{font-size:1em;} }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Broń - ŁawkaRP</h1>
+  <p>Sprawdź dostępne rodzaje broni i ich zastosowanie na serwerze.</p>
+</header>
+
+<nav>
+  <a href="index.html">🏠 Strona główna</a>
+  <a href="narkotyki.html">Narkotyki</a>
+  <a href="budynki.html">Budynki</a>
+  <a href="pojazdy.html">Pojazdy</a>
+  <a href="pancerz.html">Pancerz</a>
+</nav>
+
+<main>
+  <!-- Informacje -->
+  <div class="section">
+    <h2>System broni na serwerze</h2>
+    <p>Na ŁawkaRP dostępne są różne rodzaje broni, które możesz zdobyć legalnie lub nielegalnie. 
+    Broń jest istotnym elementem rozgrywki – od samoobrony, przez napady, aż po wojny gangów.</p>
+  </div>
+
+  <!-- Kategorie broni -->
+  <div class="section">
+    <h2>Rodzaje broni</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Pistolety</h3>
+        <p>Lekkie i poręczne, idealne do samoobrony i szybkich akcji.</p>
+      </div>
+      <div class="card">
+        <h3>Karabiny</h3>
+        <p>Skuteczne w walce na średnim i dalekim dystansie.</p>
+      </div>
+      <div class="card">
+        <h3>Snajperki</h3>
+        <p>Doskonałe do cichej eliminacji celów z dużej odległości.</p>
+      </div>
+      <div class="card">
+        <h3>Shotguny</h3>
+        <p>Mocne obrażenia na krótkim dystansie – idealne do szturmów.</p>
+      </div>
+      <div class="card">
+        <h3>Broń biała</h3>
+        <p>Noże, maczety i inne – ciche, ale śmiertelne narzędzia walki.</p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  &copy; 2025 ŁawkaRP. Wszystkie prawa zastrzeżone.
+</footer>
+
+</body>
+</html>
