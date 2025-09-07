@@ -1,134 +1,60 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ŁawkaRP - Narkotyki</title>
-<style>
-  body { margin:0; font-family:Arial,sans-serif; background:#121212; color:#f0f0f0; }
-  header { background:linear-gradient(90deg,#5865f2,#ffcc00); padding:40px 20px; text-align:center; color:white; }
-  header h1 { margin:0; font-size:2.5em; text-shadow:2px 2px #000; }
-  header p { font-size:1.2em; margin-top:10px; }
-
-  nav { background:#1c1c1c; padding:15px; text-align:center; }
-  nav a { color:#f0f0f0; text-decoration:none; margin:0 15px; font-weight:bold; }
-  nav a:hover { color:#ffcc00; }
-
-  main { max-width:1200px; margin:auto; padding:40px 20px; }
-  .section { margin-bottom:60px; }
-  .section h2 { color:#ffcc00; border-bottom:2px solid #5865f2; padding-bottom:10px; margin-bottom:20px; }
-
-  table { width:100%; border-collapse:collapse; margin-top:20px; }
-  th, td { border:1px solid #444; padding:10px; text-align:center; }
-  th { background:#5865f2; color:white; }
-  tr:nth-child(even) { background:#1c1c1c; }
-  tr:nth-child(odd) { background:#181818; }
-  tr:hover { background:#333; }
-
-  footer { background:#222; color:#aaa; text-align:center; padding:20px; margin-top:40px; }
-
-  @media (max-width:600px){
-    header h1{font-size:2em;} 
-    header p{font-size:1em;}
-    table{font-size:0.8em;}
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Narkotyki - ŁawkaRP</title>
+  <style>
+    body { margin:0; font-family:Arial,sans-serif; background:#121212; color:#f0f0f0; }
+    header { background:linear-gradient(90deg,#ff4d4d,#ffcc00); padding:40px 20px; text-align:center; color:white; }
+    header h1 { margin:0; font-size:2.5em; }
+    nav { background:#1c1c1c; padding:15px; text-align:center; }
+    nav a { color:#f0f0f0; text-decoration:none; margin:0 15px; font-weight:bold; }
+    nav a:hover { color:#ffcc00; }
+    main { max-width:1000px; margin:auto; padding:40px 20px; }
+    h2 { color:#ffcc00; border-bottom:2px solid #ff4d4d; padding-bottom:10px; margin-bottom:20px; }
+    table { width:100%; border-collapse:collapse; margin-bottom:40px; }
+    th, td { border:1px solid #444; padding:12px; text-align:center; }
+    th { background:#2a2a2a; color:#ffcc00; }
+    tr:nth-child(even) { background:#1c1c1c; }
+    tr:hover { background:#2a2a2a; }
+    footer { background:#222; color:#aaa; text-align:center; padding:20px; margin-top:40px; }
+  </style>
 </head>
 <body>
 
 <header>
   <h1>Narkotyki - ŁawkaRP</h1>
-  <p>Sprawdź ceny narkotyków według jednostki sprzedaży.</p>
+  <p>Informacje o dostępnych narkotykach na serwerze</p>
 </header>
 
 <nav>
-  <a href="index.html">Strona główna</a>
+  <a href="index.html">Strona Główna</a>
   <a href="bron.html">Broń</a>
-  <a href="budynki.html">Budynki</a>
+  <a href="narkotyki.html">Narkotyki</a>
   <a href="pojazdy.html">Pojazdy</a>
   <a href="pancerz.html">Pancerz</a>
 </nav>
 
 <main>
-
-  <!-- Gramowe -->
-  <div class="section">
-    <h2>Gramowe</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Narkotyk</th>
-          <th>Cena sadzonki / materiału</th>
-          <th>Ilość uzyskana</th>
-          <th>Cena za 1 g</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Marihuana</td>
-          <td>12 000 $</td>
-          <td>500 g</td>
-          <td>15 $ / g</td>
-        </tr>
-        <tr>
-          <td>Kokaina</td>
-          <td>10 000 $</td>
-          <td>500 g</td>
-          <td>20 $ / g</td>
-        </tr>
-        <tr>
-          <td>Amfetamina</td>
-          <td>5 000 $</td>
-          <td>500 g</td>
-          <td>10 $ / g</td>
-        </tr>
-        <tr>
-          <td>Heroina</td>
-          <td>11 000 $</td>
-          <td>500 g</td>
-          <td>22 $ / g</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <!-- Tabletki / Porcje -->
-  <div class="section">
-    <h2>Tabletki / Porcje</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Narkotyk</th>
-          <th>Cena</th>
-          <th>Jednostka</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>LSD</td><td>12 500 $</td><td>1 tabletka</td></tr>
-        <tr><td>Ekstazy</td><td>6 000 $</td><td>1 tabletka</td></tr>
-        <tr><td>Fentanyl</td><td>15 000 $</td><td>1 porcja</td></tr>
-        <tr><td>Ayahuasca</td><td>4 000 $</td><td>1 porcja</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <!-- Sztuki / Bronie -->
-  <div class="section">
-    <h2>Sztuki / bronie</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Przedmiot</th>
-          <th>Cena</th>
-          <th>Jednostka</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>Bazooka</td><td>25 000 $</td><td>1 sztuka</td></tr>
-      </tbody>
-    </table>
-  </div>
-
+  <h2>Lista narkotyków</h2>
+  <table>
+    <tr>
+      <th>Narkotyk</th>
+      <th>Cena sadzonki</th>
+      <th>Ilość z sadzonki</th>
+      <th>Cena sprzedaży</th>
+    </tr>
+    <tr><td>Marihuana</td><td>12 000 $</td><td>500 g</td><td>15 $ / g</td></tr>
+    <tr><td>LSD</td><td>12 500 $</td><td>500 tabletek</td><td>30 $ / tabletka</td></tr>
+    <tr><td>Kokaina</td><td>10 000 $</td><td>500 g</td><td>25 $ / g</td></tr>
+    <tr><td>Amfetamina</td><td>5 000 $</td><td>500 g</td><td>18 $ / g</td></tr>
+    <tr><td>Ekstazy</td><td>6 000 $</td><td>500 tabletek</td><td>20 $ / tabletka</td></tr>
+    <tr><td>Fentanyl</td><td>15 000 $</td><td>500 porcji</td><td>35 $ / porcja</td></tr>
+    <tr><td>Heroina</td><td>11 000 $</td><td>500 g</td><td>28 $ / g</td></tr>
+    <tr><td>Bazooka (narkotyk)</td><td>25 000 $</td><td>500 porcji</td><td>50 $ / porcja</td></tr>
+    <tr><td>Ayahuasca</td><td>4 000 $</td><td>500 porcji</td><td>12 $ / porcja</td></tr>
+  </table>
 </main>
 
 <footer>
