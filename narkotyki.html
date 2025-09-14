@@ -117,10 +117,11 @@
     const cost = parseFloat(row.dataset.cost);
     const qty = parseFloat(row.dataset.qty);
     const price = parseFloat(row.dataset.price);
-    const revenue = (qty * price) - cost;
+    const revenue = (qty * price) - cost; // przychód netto
     row.cells[4].textContent = revenue.toLocaleString() + " $";
   });
 </script>
 
 </body>
 </html>
+
