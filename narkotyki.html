@@ -1,121 +1,155 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ŁawkaRP - Sadzonki narkotyków</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>ŁawkaRP - Produkcja narkotyków</title>
 <style>
-  body { margin:0; font-family:Arial,sans-serif; background:#121212; color:#f0f0f0; }
-  header { background:linear-gradient(90deg,#5865f2,#ffcc00); padding:40px 20px; text-align:center; color:white; }
-  header h1 { margin:0; font-size:2.5em; text-shadow:2px 2px #000; }
-  header p { font-size:1.2em; margin-top:10px; }
-
-  nav { background:#1c1c1c; padding:15px; text-align:center; }
-  nav a { color:#f0f0f0; text-decoration:none; margin:0 15px; font-weight:bold; }
-  nav a:hover { color:#ffcc00; }
-
-  main { max-width:1200px; margin:auto; padding:40px 20px; }
-  .section { margin-bottom:60px; }
-  .section h2 { color:#ffcc00; border-bottom:2px solid #5865f2; padding-bottom:10px; margin-bottom:20px; }
-
-  table { width:100%; border-collapse:collapse; margin-top:20px; overflow-x:auto; display:block; }
-  th, td { border:1px solid #444; padding:10px; text-align:center; }
-  th { background:#5865f2; color:white; }
-  tr:nth-child(even) { background:#1c1c1c; }
-  tr:nth-child(odd) { background:#181818; }
-  tr:hover { background:#333; }
-
-  footer { background:#222; color:#aaa; text-align:center; padding:20px; margin-top:40px; }
-
-  @media (max-width:600px){
-    header h1{font-size:2em;} 
-    header p{font-size:1em;}
-    table{font-size:0.8em;}
+  :root{
+    --bg:#0f1113; --card:#121415; --muted:#9aa3c7; --accent1:#5865f2; --accent2:#ffcc00;
+    --green:#2ecc71; --red:#e74c3c; --soft:#1a1c1e;
   }
+  body{margin:0;font-family:Inter,Arial,Helvetica,sans-serif;background:var(--bg);color:#e6eef8}
+  header{background:linear-gradient(90deg,var(--accent1),var(--accent2));padding:36px 18px;text-align:center}
+  header h1{margin:0;font-size:2rem;text-shadow:1px 1px rgba(0,0,0,.4)}
+  header p{margin:.6rem 0 0;color:#0b1020;opacity:.95}
+
+  nav{background:var(--soft);padding:10px 12px;text-align:center}
+  nav a{color:#e6eef8;margin:0 10px;text-decoration:none;font-weight:600}
+  nav a:hover{color:var(--accent2)}
+
+  main{max-width:1200px;margin:28px auto;padding:0 18px;}
+  .grid{display:grid;grid-template-columns:1fr;gap:28px}
+  .card{background:linear-gradient(180deg, #0e1113, #0c0d0f);border:1px solid rgba(255,255,255,.03);border-radius:10px;padding:18px}
+  .card h2{margin:0 0 8px;color:var(--accent2)}
+  table{width:100%;border-collapse:collapse;margin-top:8px;font-size:0.95rem}
+  th,td{padding:10px 8px;border-bottom:1px solid rgba(255,255,255,.03);text-align:center}
+  th{background:linear-gradient(90deg,var(--accent1),#3f48b8);color:#fff;position:sticky;top:0}
+  tr:nth-child(even){background:rgba(255,255,255,0.01)}
+  .muted{color:var(--muted);font-size:0.9rem}
+  .small{font-size:0.85rem;color:var(--muted)}
+  .note{margin-top:8px;color:var(--muted);font-size:0.9rem}
+  @media(min-width:900px){ .grid{grid-template-columns:1fr 1fr} }
 </style>
 </head>
 <body>
-
 <header>
-  <h1>ŁawkaRP - Sadzonki narkotyków</h1>
-  <p>Ceny, produkcja i czas odnawiania (48 minut).</p>
+  <h1>ŁawkaRP — Produkcja narkotyków</h1>
+  <p>Podział: Sadzonki (roślinne), Laboratorium (chemia), Produkcja gotowych (fermentacja/farmacja). Czas produkcji: 48 min.</p>
 </header>
 
+<nav>
+  <a href="index.html">Strona główna</a>
+  <a href="sprzedaz.html">Sprzedaż</a>
+  <a href="kontakt.html">Kontakt</a>
+</nav>
+
 <main>
+  <div class="grid">
 
-  <!-- Sadzonki nieskończone -->
-  <section class="section">
-    <h2>Sadzonki nieskończone</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Narkotyk</th>
-          <th>Cena sadzonki</th>
-          <th>Ilość z sadzonki</th>
-          <th>Cena sprzedaży</th>
-          <th>Czas produkcji</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>Fentanyl</td><td>45 000 $</td><td>1 porcja</td><td>18 000 $ / szt.</td><td>48 min</td></tr>
-        <tr><td>Heroina</td><td>36 000 $</td><td>500 g</td><td>30 $ / g</td><td>48 min</td></tr>
-        <tr><td>LSD</td><td>33 000 $</td><td>1 tabletka</td><td>15 000 $ / szt.</td><td>48 min</td></tr>
-        <tr><td>DMT</td><td>30 000 $</td><td>5 g</td><td>4 000 $ / g</td><td>48 min</td></tr>
-        <tr><td>Kokaina</td><td>33 000 $</td><td>500 g</td><td>25 $ / g</td><td>48 min</td></tr>
-        <tr><td>Metamfetamina</td><td>24 000 $</td><td>500 g</td><td>23 $ / g</td><td>48 min</td></tr>
-        <tr><td>Amfetamina</td><td>18 000 $</td><td>500 g</td><td>15 $ / g</td><td>48 min</td></tr>
-        <tr><td>MDMA (Ekstazy)</td><td>22 000 $</td><td>1 tabletka</td><td>7 500 $ / szt.</td><td>48 min</td></tr>
-        <tr><td>Syntetyczne katynony</td><td>20 000 $</td><td>500 g</td><td>20 $ / g</td><td>48 min</td></tr>
-        <tr><td>Syntetyczna marihuana</td><td>14 000 $</td><td>500 g</td><td>18 $ / g</td><td>48 min</td></tr>
-        <tr><td>Marihuana</td><td>12 000 $</td><td>500 g</td><td>20 $ / g</td><td>48 min</td></tr>
-        <tr><td>Haszysz</td><td>10 000 $</td><td>500 g</td><td>18 $ / g</td><td>48 min</td></tr>
-        <tr><td>CBD</td><td>8 000 $</td><td>500 g</td><td>12 $ / g</td><td>48 min</td></tr>
-        <tr><td>Benzodiazepiny</td><td>9 000 $</td><td>1 tabletka</td><td>2 000 $ / szt.</td><td>48 min</td></tr>
-        <tr><td>Alkohol</td><td>6 000 $</td><td>1 litr</td><td>5 $ / ml</td><td>48 min</td></tr>
-        <tr><td>Ayahuasca</td><td>12 000 $</td><td>1 porcja</td><td>5 000 $ / szt.</td><td>48 min</td></tr>
-      </tbody>
-    </table>
-  </section>
+    <!-- Sadzonki (roślinne) -->
+    <div class="card">
+      <h2>Sadzonki — roślinne</h2>
+      <p class="muted">Marihuana i pochodne. Nieskończone = instalacja (zwrot ≈ po 3 zbiorach). Skończone = jednorazowy batch (zwrot po 1 zbiorze).</p>
 
-  <!-- Sadzonki skończone -->
-  <section class="section">
-    <h2>Sadzonki skończone</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Narkotyk</th>
-          <th>Cena sadzonki</th>
-          <th>Ilość z sadzonki</th>
-          <th>Cena sprzedaży</th>
-          <th>Czas produkcji</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>Fentanyl</td><td>15 000 $</td><td>1 porcja</td><td>18 000 $ / szt.</td><td>48 min</td></tr>
-        <tr><td>Heroina</td><td>12 000 $</td><td>500 g</td><td>30 $ / g</td><td>48 min</td></tr>
-        <tr><td>LSD</td><td>12 000 $</td><td>1 tabletka</td><td>15 000 $ / szt.</td><td>48 min</td></tr>
-        <tr><td>DMT</td><td>15 000 $</td><td>5 g</td><td>20 000 $ / g</td><td>48 min</td></tr>
-        <tr><td>Kokaina</td><td>10 000 $</td><td>500 g</td><td>25 $ / g</td><td>48 min</td></tr>
-        <tr><td>Metamfetamina</td><td>9 000 $</td><td>500 g</td><td>23 $ / g</td><td>48 min</td></tr>
-        <tr><td>Amfetamina</td><td>6 000 $</td><td>500 g</td><td>15 $ / g</td><td>48 min</td></tr>
-        <tr><td>MDMA (Ekstazy)</td><td>6 500 $</td><td>1 tabletka</td><td>7 500 $ / szt.</td><td>48 min</td></tr>
-        <tr><td>Syntetyczne katynony</td><td>8 000 $</td><td>500 g</td><td>20 $ / g</td><td>48 min</td></tr>
-        <tr><td>Syntetyczna marihuana</td><td>6 500 $</td><td>500 g</td><td>18 $ / g</td><td>48 min</td></tr>
-        <tr><td>Marihuana</td><td>7 000 $</td><td>500 g</td><td>20 $ / g</td><td>48 min</td></tr>
-        <tr><td>Haszysz</td><td>5 500 $</td><td>500 g</td><td>18 $ / g</td><td>48 min</td></tr>
-        <tr><td>CBD</td><td>2 500 $</td><td>500 g</td><td>12 $ / g</td><td>48 min</td></tr>
-        <tr><td>Benzodiazepiny</td><td>1 500 $</td><td>1 tabletka</td><td>2 000 $ / szt.</td><td>48 min</td></tr>
-        <tr><td>Alkohol</td><td>3 000 $</td><td>1 litr</td><td>5 $ / ml</td><td>48 min</td></tr>
-        <tr><td>Ayahuasca</td><td>3 500 $</td><td>1 porcja</td><td>5 000 $ / szt.</td><td>48 min</td></tr>
-      </tbody>
-    </table>
-  </section>
+      <h3 class="small">Nieskończone (uprawa)</h3>
+      <table>
+        <thead>
+          <tr><th>Narkotyk</th><th>Cena instalacji</th><th>Ilość / zbiór</th><th>Cena sprzedaży</th><th>Czas</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Marihuana</td><td>12 000 $</td><td>500 g</td><td>12 $ / g (6 000 $)</td><td>48 min</td></tr>
+          <tr><td>Syntetyczna marihuana</td><td>14 000 $</td><td>500 g</td><td>15 $ / g (7 500 $)</td><td>48 min</td></tr>
+          <tr><td>Haszysz</td><td>10 000 $</td><td>500 g</td><td>10 $ / g (5 000 $)</td><td>48 min</td></tr>
+          <tr><td>CBD</td><td>8 000 $</td><td>500 g</td><td>7 $ / g (3 500 $)</td><td>48 min</td></tr>
+        </tbody>
+      </table>
 
+      <h3 class="small" style="margin-top:12px">Skończone (jednorazowy batch)</h3>
+      <table>
+        <thead><tr><th>Narkotyk</th><th>Cena batch</th><th>Ilość</th><th>Przychód</th><th>Czas</th></tr></thead>
+        <tbody>
+          <tr><td>Marihuana</td><td>7 000 $</td><td>500 g</td><td>10 000 $</td><td>48 min</td></tr>
+          <tr><td>Syntetyczna marihuana</td><td>6 500 $</td><td>500 g</td><td>9 000 $</td><td>48 min</td></tr>
+          <tr><td>Haszysz</td><td>5 500 $</td><td>500 g</td><td>9 000 $</td><td>48 min</td></tr>
+          <tr><td>CBD</td><td>2 500 $</td><td>500 g</td><td>6 000 $</td><td>48 min</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Laboratorium (chemia / synteza) -->
+    <div class="card">
+      <h2>Laboratorium — chemia / synteza</h2>
+      <p class="muted">Syntezowane i przetwarzane substancje. Nieskończone = stałe źródło (zwrot ≈ po 3 zbiorach). Skończone = pojedynczy batch (zwrot po 1 zbiorze).</p>
+
+      <h3 class="small">Nieskończone (instalacja lab)</h3>
+      <table>
+        <thead><tr><th>Narkotyk</th><th>Cena instalacji</th><th>Ilość / zbiór</th><th>Cena sprzedaży</th><th>Czas</th></tr></thead>
+        <tbody>
+          <tr><td>Fentanyl</td><td>45 000 $</td><td>1 porcja</td><td>18 000 $ / szt.</td><td>48 min</td></tr>
+          <tr><td>Heroina</td><td>36 000 $</td><td>500 g</td><td>30 $ / g (15 000 $)</td><td>48 min</td></tr>
+          <tr><td>LSD</td><td>33 000 $</td><td>1 tabletka</td><td>15 000 $ / szt.</td><td>48 min</td></tr>
+          <tr><td>DMT</td><td>30 000 $</td><td>5 g</td><td>4 000 $ / g (20 000 $)</td><td>48 min</td></tr>
+          <tr><td>Kokaina</td><td>33 000 $</td><td>500 g</td><td>25 $ / g (12 500 $)</td><td>48 min</td></tr>
+          <tr><td>Metamfetamina</td><td>24 000 $</td><td>500 g</td><td>23 $ / g (11 500 $)</td><td>48 min</td></tr>
+          <tr><td>Amfetamina</td><td>18 000 $</td><td>500 g</td><td>15 $ / g (7 500 $)</td><td>48 min</td></tr>
+          <tr><td>MDMA</td><td>22 000 $</td><td>1 tabletka</td><td>7 500 $ / szt.</td><td>48 min</td></tr>
+          <tr><td>Syntetyczne katynony</td><td>20 000 $</td><td>500 g</td><td>20 $ / g (10 000 $)</td><td>48 min</td></tr>
+          <tr><td>Psylocybina</td><td>20 000 $</td><td>5 g</td><td>1 200 $ / g (6 000 $)</td><td>48 min</td></tr>
+          <tr><td>Ketamina</td><td>20 000 $</td><td>10 g</td><td>2 000 $ / g (20 000 $)</td><td>48 min</td></tr>
+        </tbody>
+      </table>
+
+      <h3 class="small" style="margin-top:12px">Skończone (batch lab)</h3>
+      <table>
+        <thead><tr><th>Narkotyk</th><th>Cena batch</th><th>Ilość</th><th>Przychód</th><th>Czas</th></tr></thead>
+        <tbody>
+          <tr><td>Fentanyl</td><td>15 000 $</td><td>1 porcja</td><td>18 000 $</td><td>48 min</td></tr>
+          <tr><td>Heroina</td><td>12 000 $</td><td>500 g</td><td>15 000 $</td><td>48 min</td></tr>
+          <tr><td>LSD</td><td>12 000 $</td><td>1 tabletka</td><td>15 000 $</td><td>48 min</td></tr>
+          <tr><td>DMT</td><td>15 000 $</td><td>5 g</td><td>20 000 $</td><td>48 min</td></tr>
+          <tr><td>Kokaina</td><td>10 000 $</td><td>500 g</td><td>12 500 $</td><td>48 min</td></tr>
+          <tr><td>Metamfetamina</td><td>9 000 $</td><td>500 g</td><td>11 500 $</td><td>48 min</td></tr>
+          <tr><td>Amfetamina</td><td>6 000 $</td><td>500 g</td><td>7 500 $</td><td>48 min</td></tr>
+          <tr><td>MDMA</td><td>6 500 $</td><td>1 tabletka</td><td>7 500 $</td><td>48 min</td></tr>
+          <tr><td>Syntetyczne katynony</td><td>8 000 $</td><td>500 g</td><td>10 000 $</td><td>48 min</td></tr>
+          <tr><td>Psylocybina</td><td>4 000 $</td><td>5 g</td><td>6 000 $</td><td>48 min</td></tr>
+          <tr><td>Ketamina</td><td>10 000 $</td><td>10 g</td><td>20 000 $</td><td>48 min</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Produkcja gotowych (fermentacja / farmacja) -->
+    <div class="card" style="grid-column:1 / -1">
+      <h2>Produkcja gotowych — fermentacja / farmacja</h2>
+      <p class="muted">Alkohol i benzodiazepiny — teraz **produkowane**. Możesz mieć instalację (nieskończone) lub jednorazowy batch (skończone).</p>
+
+      <h3 class="small">Nieskończone (urządzenie / destylarnia / synteza)</h3>
+      <table>
+        <thead><tr><th>Produkt</th><th>Cena instalacji</th><th>Ilość / zbiór</th><th>Cena sprzedaży / przychód</th><th>Czas</th></tr></thead>
+        <tbody>
+          <tr><td>Alkohol (destylarnia)</td><td>12 500 $</td><td>1 litr</td><td>5 $ / ml → 5 000 $</td><td>48 min</td></tr>
+          <tr><td>Benzodiazepiny (synteza)</td><td>6 750 $</td><td>1 tabletka</td><td>2 000 $ / szt.</td><td>48 min</td></tr>
+        </tbody>
+      </table>
+
+      <h3 class="small" style="margin-top:12px">Skończone (batch)</h3>
+      <table>
+        <thead><tr><th>Produkt</th><th>Cena batch</th><th>Ilość</th><th>Przychód</th><th>Czas</th></tr></thead>
+        <tbody>
+          <tr><td>Alkohol (batch)</td><td>3 500 $</td><td>1 litr</td><td>5 000 $</td><td>48 min</td></tr>
+          <tr><td>Benzodiazepiny (batch)</td><td>1 500 $</td><td>1 tabletka</td><td>2 000 $</td><td>48 min</td></tr>
+        </tbody>
+      </table>
+
+      <p class="note">Legenda: <strong>Nieskończone</strong> = inwestujesz w instalację — zwrot ≈ po 3 zbiorach. <strong>Skończone</strong> = jednorazowy batch — zwrot po 1 zbiorze (mały zysk).</p>
+    </div>
+
+  </div>
 </main>
 
-<footer>
-  &copy; 2025 ŁawkaRP. Wszystkie prawa zastrzeżone.
+<footer style="text-align:center;padding:18px;color:#9aa3c7;background:#07080a">
+  &copy; 2025 ŁawkaRP — wszystkie wartości przykładowe, dostosuj według potrzeb serwera.
 </footer>
-
 </body>
 </html>
