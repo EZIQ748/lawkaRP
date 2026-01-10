@@ -69,125 +69,6 @@
             border: 1px solid rgba(255, 85, 85, 0.3);
         }
 
-        /* Kalkulator */
-        .calculator {
-            background: rgba(15, 25, 40, 0.9);
-            border-radius: 15px;
-            padding: 25px;
-            margin: 30px auto;
-            max-width: 900px;
-            border: 1px solid rgba(0, 200, 255, 0.3);
-            box-shadow: 0 0 25px rgba(0, 200, 255, 0.2);
-        }
-
-        .calculator-title {
-            color: #00ffaa;
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .calculator-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin-bottom: 25px;
-        }
-
-        .calc-input-group {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-
-        .calc-label {
-            color: #00ccff;
-            font-size: 0.95rem;
-            font-weight: 600;
-        }
-
-        .calc-select, .calc-input {
-            background: rgba(0, 20, 40, 0.8);
-            border: 1px solid rgba(0, 200, 255, 0.3);
-            color: #fff;
-            padding: 12px 15px;
-            border-radius: 8px;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-        }
-
-        .calc-select:focus, .calc-input:focus {
-            outline: none;
-            border-color: #00ccff;
-            box-shadow: 0 0 10px rgba(0, 200, 255, 0.3);
-        }
-
-        .calc-button {
-            background: linear-gradient(90deg, #00ccff, #00aacc);
-            color: #000;
-            border: none;
-            padding: 14px 25px;
-            border-radius: 10px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            margin-top: 10px;
-            width: 100%;
-        }
-
-        .calc-button:hover {
-            background: linear-gradient(90deg, #00ffaa, #00ccff);
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 200, 255, 0.4);
-        }
-
-        .calc-results {
-            background: rgba(0, 30, 60, 0.7);
-            border-radius: 10px;
-            padding: 20px;
-            margin-top: 20px;
-            display: none;
-        }
-
-        .calc-results.active {
-            display: block;
-            animation: fadeIn 0.5s ease;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .result-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-        }
-
-        .result-card {
-            background: rgba(0, 40, 80, 0.5);
-            border-radius: 8px;
-            padding: 15px;
-            border: 1px solid rgba(0, 200, 255, 0.2);
-            text-align: center;
-        }
-
-        .result-value {
-            color: #00ffaa;
-            font-weight: bold;
-            font-size: 1.3rem;
-            margin-top: 5px;
-        }
-
-        .result-label {
-            color: #aaa;
-            font-size: 0.9rem;
-        }
-
         /* Kategorie */
         .categories {
             display: flex;
@@ -301,6 +182,15 @@
             border-bottom: 2px solid rgba(0, 255, 150, 0.3);
         }
 
+        .lab-table thead {
+            background: rgba(0, 30, 60, 0.7);
+        }
+
+        .lab-table th {
+            color: #00ccff;
+            border-bottom: 2px solid rgba(0, 200, 255, 0.3);
+        }
+
         .upgrades-table thead {
             background: rgba(80, 0, 80, 0.7);
         }
@@ -323,6 +213,10 @@
             background-color: rgba(0, 255, 150, 0.05);
         }
 
+        .lab-table tr:hover {
+            background-color: rgba(0, 200, 255, 0.05);
+        }
+
         .upgrades-table tr:hover {
             background-color: rgba(170, 0, 255, 0.05);
         }
@@ -338,6 +232,13 @@
             font-weight: bold;
             font-size: 1.1rem;
             text-shadow: 0 0 5px rgba(0, 255, 170, 0.5);
+        }
+
+        .price-lab {
+            color: #00ccff;
+            font-weight: bold;
+            font-size: 1.1rem;
+            text-shadow: 0 0 5px rgba(0, 200, 255, 0.5);
         }
 
         .price-upgrade {
@@ -373,6 +274,11 @@
 
         .profit {
             color: #00ffaa;
+            font-weight: bold;
+        }
+
+        .profit-lab {
+            color: #00ccff;
             font-weight: bold;
         }
 
@@ -432,14 +338,6 @@
             .table-container {
                 border-radius: 8px;
             }
-            
-            .calculator-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .result-grid {
-                grid-template-columns: 1fr;
-            }
         }
 
         @media (max-width: 768px) {
@@ -493,68 +391,9 @@
             </div>
         </header>
 
-        <!-- KALKULATOR -->
-        <div class="calculator glow">
-            <h2 class="calculator-title"><i class="fas fa-calculator"></i> Kalkulator Inwestycji</h2>
-            <div class="calculator-grid">
-                <div class="calc-input-group">
-                    <label class="calc-label">Typ produkcji</label>
-                    <select id="productionType" class="calc-select">
-                        <option value="plants">Sadzonki Roślinne</option>
-                        <option value="lab">Laboratoria Chemiczne</option>
-                    </select>
-                </div>
-                
-                <div class="calc-input-group">
-                    <label class="calc-label">Narkotyk</label>
-                    <select id="drugType" class="calc-select">
-                        <!-- Opcje będą wypełnione przez JavaScript -->
-                        <option value="marihuana">Marihuana</option>
-                        <option value="synthetic_marihuana">Syntetyczna Marihuana</option>
-                        <option value="haszysz">Haszysz</option>
-                        <option value="cbd">CBD</option>
-                        <option value="ayahuasca">Ayahuasca</option>
-                    </select>
-                </div>
-                
-                <div class="calc-input-group">
-                    <label class="calc-label">Ilość (gramy)</label>
-                    <input type="number" id="cyclesCount" class="calc-input" value="10" min="1" max="1000">
-                </div>
-            </div>
-            
-            <button id="calculateBtn" class="calc-button">
-                <i class="fas fa-chart-line"></i> OBLICZ ZYSKI
-            </button>
-            
-            <div id="calcResults" class="calc-results">
-                <div class="result-grid">
-                    <div class="result-card">
-                        <div class="result-label">Koszt produkcji</div>
-                        <div id="investmentCost" class="result-value">0 $</div>
-                    </div>
-                    
-                    <div class="result-card">
-                        <div class="result-label">Cena sprzedaży (1g)</div>
-                        <div id="revenuePerCycle" class="result-value">0 $</div>
-                    </div>
-                    
-                    <div class="result-card">
-                        <div class="result-label">Całkowity przychód</div>
-                        <div id="totalRevenue" class="result-value">0 $</div>
-                    </div>
-                    
-                    <div class="result-card">
-                        <div class="result-label">Zysk netto</div>
-                        <div id="roiCycles" class="result-value">0 $</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <div class="categories">
             <button class="category-btn active" data-section="plants">
-                <i class="fas fa-seedling"></i> Sadzonki Roślinne
+                <i class="fas fa-seedling"></i> Sadzonki
             </button>
             <button class="category-btn" data-section="lab">
                 <i class="fas fa-flask"></i> Laboratoria
@@ -564,11 +403,11 @@
             </button>
         </div>
 
-        <!-- SADZONKI ROŚLINNE - JEDNA TABELA -->
+        <!-- SADZONKI - UPROSZCZONA WERSJA -->
         <section id="plants" class="pricing-section active">
-            <h2 class="section-title plants"><i class="fas fa-seedling"></i> Sadzonki Roślinne</h2>
+            <h2 class="section-title plants"><i class="fas fa-seedling"></i> Sadzonki - cena za 1g</h2>
             <p class="section-description">
-                Marihuana i pochodne. Ceny detaliczne za 1 gram. Produkcja roślinna - bezpieczniejsza ale niższe zyski.
+                Marihuana i pochodne. Ceny detaliczne za 1 gram. Produkcja roślinna - niższe ryzyko, średnie zyski.
             </p>
 
             <div class="table-container">
@@ -576,193 +415,196 @@
                     <thead>
                         <tr>
                             <th>Narkotyk</th>
-                            <th>Cena za 1g</th>
+                            <th>Cena detaliczna (1g)</th>
                             <th>Koszt produkcji 1g</th>
                             <th>Zysk z 1g</th>
-                            <th>Minimalny batch</th>
                             <th>Czas produkcji</th>
+                            <th>Minimalny batch</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td class="drug-name">🌿 Marihuana (naturalna)</td>
-                            <td class="profit">400 $</td>
+                            <td class="price">400 $</td>
                             <td class="price">50 $</td>
                             <td class="profit">+350 $</td>
+                            <td class="time">5.76 min</td>
                             <td>10 g</td>
-                            <td class="time">5.76 min/g</td>
                         </tr>
                         <tr>
                             <td class="drug-name">🧪 Syntetyczna marihuana</td>
-                            <td class="profit">200 $</td>
+                            <td class="price">200 $</td>
                             <td class="price">60 $</td>
                             <td class="profit">+140 $</td>
+                            <td class="time">5.76 min</td>
                             <td>10 g</td>
-                            <td class="time">5.76 min/g</td>
                         </tr>
                         <tr>
                             <td class="drug-name">🍫 Haszysz</td>
-                            <td class="profit">800 $</td>
+                            <td class="price">800 $</td>
                             <td class="price">44 $</td>
                             <td class="profit">+756 $</td>
+                            <td class="time">5.76 min</td>
                             <td>10 g</td>
-                            <td class="time">5.76 min/g</td>
                         </tr>
                         <tr>
                             <td class="drug-name">🌱 CBD (wysokie stężenie)</td>
-                            <td class="profit">300 $</td>
+                            <td class="price">300 $</td>
                             <td class="price">30 $</td>
                             <td class="profit">+270 $</td>
+                            <td class="time">5.76 min</td>
                             <td>10 g</td>
-                            <td class="time">5.76 min/g</td>
                         </tr>
                         <tr>
                             <td class="drug-name">🍵 Ayahuasca</td>
-                            <td class="profit">3 000 $</td>
+                            <td class="price">3 000 $</td>
                             <td class="price">360 $</td>
                             <td class="profit">+2 640 $</td>
+                            <td class="time">57.6 min</td>
                             <td>1 g</td>
-                            <td class="time">57.6 min/g</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-            <p class="small-text">* Ceny detaliczne za 1 gram<br>
-            ** Haszysz jest najbardziej opłacalny roślinnie: 800$/g przy koszcie 44$/g<br>
-            *** Ayahuasca ma najwyższą cenę ale najdłuższy czas produkcji</p>
+            
+            <p class="small-text">* Czas produkcji: 48 minut na 500g = 5.76 min/g (Ayahuasca: 48min na 50g = 57.6 min/g)<br>
+            ** Haszysz jest najbardziej opłacalny roślinny narkotyk: 800$/g przy koszcie 44$/g<br>
+            *** Ayahuasca daje największy zysk ale najdłuższy czas produkcji</p>
         </section>
 
-        <!-- LABORATORIA CHEMICZNE - JEDNA TABELA -->
+        <!-- LABORATORIA - UPROSZCZONA WERSJA -->
         <section id="lab" class="pricing-section">
-            <h2 class="section-title lab"><i class="fas fa-flask"></i> Laboratoria Chemiczne</h2>
+            <h2 class="section-title lab"><i class="fas fa-flask"></i> Laboratoria - cena za 1g/porcję</h2>
             <p class="section-description">
-                Syntezowane i przetwarzane substancje. Wyższe ceny detaliczne ale większe ryzyko i wyższe koszty produkcji.
+                Syntezowane i przetwarzane substancje. Ceny detaliczne za 1 gram lub porcję. Wyższe zyski ale większe ryzyko.
             </p>
 
             <div class="table-container">
-                <table>
+                <table class="lab-table">
                     <thead>
                         <tr>
                             <th>Narkotyk</th>
-                            <th>Cena za 1g/porcję</th>
+                            <th>Cena detaliczna</th>
                             <th>Koszt produkcji</th>
                             <th>Zysk z 1g/porcji</th>
-                            <th>Minimalny batch</th>
                             <th>Czas produkcji</th>
+                            <th>Minimalny batch</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td class="drug-name">💉 Fentanyl</td>
-                            <td class="profit">1 200 $/g</td>
-                            <td class="price">120 $</td>
-                            <td class="profit">+1 080 $</td>
-                            <td>10 g</td>
+                            <td class="price-lab">1 200 $/g</td>
+                            <td class="price-lab">120 $/g</td>
+                            <td class="profit-lab">+1 080 $</td>
                             <td class="time">5.76 min/g</td>
+                            <td>10 g</td>
                         </tr>
                         <tr>
                             <td class="drug-name">⚗️ Heroina</td>
-                            <td class="profit">900 $/g</td>
-                            <td class="price">100 $</td>
-                            <td class="profit">+800 $</td>
-                            <td>10 g</td>
+                            <td class="price-lab">900 $/g</td>
+                            <td class="price-lab">100 $/g</td>
+                            <td class="profit-lab">+800 $</td>
                             <td class="time">5.76 min/g</td>
+                            <td>10 g</td>
                         </tr>
                         <tr>
                             <td class="drug-name">🌈 LSD</td>
-                            <td class="profit">500 $/tab</td>
-                            <td class="price">550 $</td>
-                            <td class="profit">-50 $</td>
-                            <td>10 tab</td>
+                            <td class="price-lab">500 $/tab</td>
+                            <td class="price-lab">550 $/tab</td>
+                            <td class="profit-lab" style="color: #ff5555;">-50 $</td>
                             <td class="time">28.8 min/tab</td>
+                            <td>10 tab</td>
                         </tr>
                         <tr>
                             <td class="drug-name">🌀 DMT</td>
-                            <td class="profit">2 500 $/g</td>
-                            <td class="price">1 300 $</td>
-                            <td class="profit">+1 200 $</td>
-                            <td>5 g</td>
+                            <td class="price-lab">2 500 $/g</td>
+                            <td class="price-lab">1 300 $/g</td>
+                            <td class="profit-lab">+1 200 $</td>
                             <td class="time">57.6 min/g</td>
+                            <td>5 g</td>
                         </tr>
                         <tr>
                             <td class="drug-name">❄️ Kokaina</td>
-                            <td class="profit">600 $/g</td>
-                            <td class="price">90 $</td>
-                            <td class="profit">+510 $</td>
-                            <td>10 g</td>
+                            <td class="price-lab">600 $/g</td>
+                            <td class="price-lab">90 $/g</td>
+                            <td class="profit-lab">+510 $</td>
                             <td class="time">5.76 min/g</td>
+                            <td>10 g</td>
                         </tr>
                         <tr>
                             <td class="drug-name">⚡ Metamfetamina</td>
-                            <td class="profit">500 $/g</td>
-                            <td class="price">80 $</td>
-                            <td class="profit">+420 $</td>
-                            <td>10 g</td>
+                            <td class="price-lab">500 $/g</td>
+                            <td class="price-lab">80 $/g</td>
+                            <td class="profit-lab">+420 $</td>
                             <td class="time">5.76 min/g</td>
+                            <td>10 g</td>
                         </tr>
                         <tr>
                             <td class="drug-name">💊 Amfetamina</td>
-                            <td class="profit">400 $/g</td>
-                            <td class="price">60 $</td>
-                            <td class="profit">+340 $</td>
-                            <td>10 g</td>
+                            <td class="price-lab">400 $/g</td>
+                            <td class="price-lab">60 $/g</td>
+                            <td class="profit-lab">+340 $</td>
                             <td class="time">5.76 min/g</td>
+                            <td>10 g</td>
                         </tr>
                         <tr>
                             <td class="drug-name">💎 MDMA</td>
-                            <td class="profit">200 $/tab</td>
-                            <td class="price">175 $</td>
-                            <td class="profit">+25 $</td>
-                            <td>10 tab</td>
+                            <td class="price-lab">200 $/tab</td>
+                            <td class="price-lab">175 $/tab</td>
+                            <td class="profit-lab">+25 $</td>
                             <td class="time">14.4 min/tab</td>
+                            <td>10 tab</td>
                         </tr>
                         <tr>
                             <td class="drug-name">🧬 Syntetyczne katynony</td>
-                            <td class="profit">450 $/g</td>
-                            <td class="price">76 $</td>
-                            <td class="profit">+374 $</td>
-                            <td>10 g</td>
+                            <td class="price-lab">450 $/g</td>
+                            <td class="price-lab">76 $/g</td>
+                            <td class="profit-lab">+374 $</td>
                             <td class="time">5.76 min/g</td>
+                            <td>10 g</td>
                         </tr>
                         <tr>
                             <td class="drug-name">🍄 Psylocybina</td>
-                            <td class="profit">1 000 $/g</td>
-                            <td class="price">500 $</td>
-                            <td class="profit">+500 $</td>
-                            <td>5 g</td>
+                            <td class="price-lab">1 000 $/g</td>
+                            <td class="price-lab">500 $/g</td>
+                            <td class="profit-lab">+500 $</td>
                             <td class="time">57.6 min/g</td>
+                            <td>5 g</td>
                         </tr>
                         <tr>
                             <td class="drug-name">🐴 Ketamina</td>
-                            <td class="profit">800 $/g</td>
-                            <td class="price">450 $</td>
-                            <td class="profit">+350 $</td>
-                            <td>10 g</td>
+                            <td class="price-lab">800 $/g</td>
+                            <td class="price-lab">450 $/g</td>
+                            <td class="profit-lab">+350 $</td>
                             <td class="time">28.8 min/g</td>
+                            <td>10 g</td>
                         </tr>
                         <tr>
                             <td class="drug-name">🍵 Ayahuasca (lab)</td>
-                            <td class="profit">3 000 $/g</td>
-                            <td class="price">440 $</td>
-                            <td class="profit">+2 560 $</td>
-                            <td>5 g</td>
+                            <td class="price-lab">3 000 $/g</td>
+                            <td class="price-lab">440 $/g</td>
+                            <td class="profit-lab">+2 560 $</td>
                             <td class="time">57.6 min/g</td>
+                            <td>5 g</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-            <p class="small-text">* Ceny detaliczne za 1 gram lub porcję<br>
-            ** Ayahuasca (lab) i DMT są najbardziej opłacalne chemicznie<br>
-            *** LSD jest nieopłacalne - tylko do produkcji na specjalne zamówienie</p>
+            
+            <p class="small-text">* LSD jest nieopłacalne w produkcji batchowej - tylko na specjalne zamówienia<br>
+            ** Ayahuasca (lab) i Fentanyl są najbardziej opłacalne chemicznie<br>
+            *** Produkcja chemiczna wymaga specjalistycznego sprzętu i większych inwestycji</p>
         </section>
 
-        <!-- ULEPSZENIA - JEDNA TABELA -->
+        <!-- ULEPSZENIA -->
         <section id="upgrades" class="pricing-section">
             <h2 class="section-title upgrades"><i class="fas fa-tools"></i> Ulepszenia Laboratoriów</h2>
             <p class="section-description">
-                Popraw efektywność, bezpieczeństwo i zyski z twojego laboratorium. Inwestycje długoterminowe.
+                Popraw efektywność, bezpieczeństwo i zyski z twojego laboratorium.
             </p>
 
+            <h3 style="color: #aa00ff; margin: 30px 0 15px; font-size: 1.3rem;"><i class="fas fa-cogs"></i> Ulepszenia Wydajności</h3>
             <div class="table-container">
                 <table class="upgrades-table">
                     <thead>
@@ -786,15 +628,8 @@
                             <td class="drug-name">Automatyczny Mieszalnik</td>
                             <td class="price-upgrade">100 000 $</td>
                             <td>-10% czasu produkcji</td>
-                            <td>Laboratorium średnie/duże</td>
+                            <td>Laboratorium średnie lub większe</td>
                             <td>8 000 $</td>
-                        </tr>
-                        <tr>
-                            <td class="drug-name">Chłodnia Przemysłowa</td>
-                            <td class="price-upgrade">85 000 $</td>
-                            <td>+15% trwałości produktów</td>
-                            <td>Laboratorium duże/premium</td>
-                            <td>12 000 $</td>
                         </tr>
                         <tr>
                             <td class="drug-name">Zaawansowany Destylator</td>
@@ -806,14 +641,31 @@
                         <tr>
                             <td class="drug-name">Generator Zapasowy</td>
                             <td class="price-upgrade">75 000 $</td>
-                            <td>Ciągłość produkcji</td>
-                            <td>Wszystkie laboratoria</td>
+                            <td>Ciągłość produkcji przy awariach</td>
+                            <td>Wszystkie typy laboratoriów</td>
                             <td>6 000 $</td>
                         </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 style="color: #aa00ff; margin: 30px 0 15px; font-size: 1.3rem;"><i class="fas fa-shield-alt"></i> Ulepszenia Bezpieczeństwa</h3>
+            <div class="table-container">
+                <table class="upgrades-table">
+                    <thead>
+                        <tr>
+                            <th>System Bezpieczeństwa</th>
+                            <th>Cena</th>
+                            <th>Efekt</th>
+                            <th>Wymagania</th>
+                            <th>Miesięczny koszt</th>
+                        </tr>
+                    </thead>
+                    <tbody>
                         <tr>
                             <td class="drug-name">Monitoring CCTV</td>
                             <td class="price-upgrade">50 000 $</td>
-                            <td>Wykrywanie zagrożeń</td>
+                            <td>Wczesne wykrywanie zagrożeń</td>
                             <td>Dowolne laboratorium</td>
                             <td>3 200 $</td>
                         </tr>
@@ -821,23 +673,33 @@
                             <td class="drug-name">System Alarmowy</td>
                             <td class="price-upgrade">75 000 $</td>
                             <td>Automatyczne powiadomienia</td>
-                            <td>Laboratorium średnie/duże</td>
+                            <td>Laboratorium średnie lub większe</td>
                             <td>4 800 $</td>
                         </tr>
                         <tr>
                             <td class="drug-name">System Samoobrony</td>
                             <td class="price-upgrade">160 000 $</td>
-                            <td>Obrona przed najazdami</td>
+                            <td>Automatyczna obrona przed najazdami</td>
                             <td>Laboratorium premium</td>
                             <td>14 000 $</td>
                         </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 style="color: #aa00ff; margin: 30px 0 15px; font-size: 1.3rem;"><i class="fas fa-chart-line"></i> Ulepszenia Logistyczne</h3>
+            <div class="table-container">
+                <table class="upgrades-table">
+                    <thead>
                         <tr>
-                            <td class="drug-name">Ukryte Wejścia</td>
-                            <td class="price-upgrade">140 000 $</td>
-                            <td>Ukrycie lokalizacji</td>
-                            <td>Laboratorium premium</td>
-                            <td>10 000 $</td>
+                            <th>System Logistyczny</th>
+                            <th>Cena</th>
+                            <th>Efekt</th>
+                            <th>Wymagania</th>
+                            <th>Miesięczny koszt</th>
                         </tr>
+                    </thead>
+                    <tbody>
                         <tr>
                             <td class="drug-name">System Zaopatrzenia</td>
                             <td class="price-upgrade">40 000 $</td>
@@ -848,23 +710,20 @@
                         <tr>
                             <td class="drug-name">Magazyn Chłodniczy</td>
                             <td class="price-upgrade">180 000 $</td>
-                            <td>+30% pojemności</td>
+                            <td>+30% pojemności magazynowej</td>
                             <td>Laboratorium premium</td>
                             <td>12 000 $</td>
                         </tr>
                         <tr>
                             <td class="drug-name">System Zarządzania</td>
                             <td class="price-upgrade">240 000 $</td>
-                            <td>+25% efektywności</td>
+                            <td>+25% efektywności całego labu</td>
                             <td>Laboratorium premium</td>
                             <td>16 000 $</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-            <p class="small-text">* Ulepszenia można łączyć dla kumulacji efektów<br>
-            ** Miesięczne koszty to opłaty za utrzymanie i serwis<br>
-            *** Inwestycje zwracają się po 2-3 miesiącach przy regularnej produkcji</p>
         </section>
 
         <footer>
@@ -875,33 +734,65 @@
     </div>
 
     <script>
-        // Zaktualizowane dane dla kalkulatora - CENY ZA 1g
-        const drugData = {
-            plants: {
-                marihuana: { investment: 50, revenue: 400, unit: "1 g" },
-                synthetic_marihuana: { investment: 60, revenue: 200, unit: "1 g" },
-                haszysz: { investment: 44, revenue: 800, unit: "1 g" },
-                cbd: { investment: 30, revenue: 300, unit: "1 g" },
-                ayahuasca: { investment: 360, revenue: 3000, unit: "1 g" }
-            },
-            lab: {
-                fentanyl: { investment: 120, revenue: 1200, unit: "1 g" },
-                heroina: { investment: 100, revenue: 900, unit: "1 g" },
-                lsd: { investment: 550, revenue: 500, unit: "1 tab" },
-                dmt: { investment: 1300, revenue: 2500, unit: "1 g" },
-                kokaina: { investment: 90, revenue: 600, unit: "1 g" },
-                metamfetamina: { investment: 80, revenue: 500, unit: "1 g" },
-                amfetamina: { investment: 60, revenue: 400, unit: "1 g" },
-                mdma: { investment: 175, revenue: 200, unit: "1 tab" },
-                katynony: { investment: 76, revenue: 450, unit: "1 g" },
-                psylocybina: { investment: 500, revenue: 1000, unit: "1 g" },
-                ketamina: { investment: 450, revenue: 800, unit: "1 g" },
-                ayahuasca: { investment: 440, revenue: 3000, unit: "1 g" }
-            }
-        };
-
-        // Opcje narkotyków dla selecta
-        const drugOptions = {
-            plants: [
-                { value: 'marihuana', label: '🌿 Marihuana (1g = 400$)' },
-                { value:
+        // Inicjalizacja
+        document.addEventListener('DOMContentLoaded', function() {
+            // Przełączanie sekcji
+            document.querySelectorAll('.category-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    document.querySelectorAll('.category-btn').forEach(btn => {
+                        btn.classList.remove('active');
+                    });
+                    
+                    this.classList.add('active');
+                    
+                    const sectionId = this.getAttribute('data-section');
+                    
+                    document.querySelectorAll('.pricing-section').forEach(section => {
+                        section.classList.remove('active');
+                    });
+                    
+                    document.getElementById(sectionId).classList.add('active');
+                });
+            });
+            
+            // Efekt wpisywania dla logo
+            const logo = document.querySelector('.logo');
+            const originalText = logo.textContent;
+            logo.textContent = '';
+            
+            let i = 0;
+            const typeWriter = () => {
+                if (i < originalText.length) {
+                    logo.textContent += originalText.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 50);
+                }
+            };
+            
+            setTimeout(typeWriter, 300);
+            
+            // Efekt migania dla cen
+            setInterval(() => {
+                const prices = document.querySelectorAll('.price, .profit, .price-upgrade, .price-lab, .profit-lab');
+                prices.forEach(price => {
+                    if (Math.random() > 0.97) {
+                        let glowColor;
+                        if (price.classList.contains('price-lab') || price.classList.contains('profit-lab')) {
+                            glowColor = '#00ccff';
+                        } else if (price.classList.contains('price-upgrade') || price.classList.contains('profit-upgrade')) {
+                            glowColor = '#aa00ff';
+                        } else {
+                            glowColor = '#00ffaa';
+                        }
+                        
+                        price.style.textShadow = `0 0 10px ${glowColor}, 0 0 20px ${glowColor}`;
+                        setTimeout(() => {
+                            price.style.textShadow = `0 0 5px rgba(${glowColor === '#00ccff' ? '0, 204, 255' : glowColor === '#aa00ff' ? '170, 0, 255' : '0, 255, 170'}, 0.5)`;
+                        }, 300);
+                    }
+                });
+            }, 1500);
+        });
+    </script>
+</body>
+</html>
