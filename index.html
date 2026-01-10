@@ -130,11 +130,6 @@
             border-color: #00ccff;
         }
 
-        .section-title.calculator {
-            color: #aa00ff;
-            border-color: #aa00ff;
-        }
-
         .section-description {
             color: #aaa;
             margin-bottom: 25px;
@@ -260,127 +255,6 @@
             font-weight: bold;
         }
 
-        /* Kalkulator */
-        .calculator-container {
-            background: rgba(0, 20, 40, 0.6);
-            border-radius: 15px;
-            padding: 30px;
-            border: 1px solid rgba(170, 0, 255, 0.3);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-            margin-bottom: 40px;
-        }
-
-        .calculator-form {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 25px;
-            margin-bottom: 30px;
-        }
-
-        .calculator-group {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .calculator-label {
-            color: #aa00ff;
-            font-weight: 600;
-            font-size: 1.1rem;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .calculator-select, .calculator-input {
-            background: rgba(0, 0, 0, 0.4);
-            border: 1px solid rgba(170, 0, 255, 0.4);
-            border-radius: 8px;
-            padding: 12px 15px;
-            color: white;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-        }
-
-        .calculator-select:focus, .calculator-input:focus {
-            outline: none;
-            border-color: #aa00ff;
-            box-shadow: 0 0 15px rgba(170, 0, 255, 0.4);
-        }
-
-        .calculator-button {
-            grid-column: span 3;
-            background: linear-gradient(90deg, #aa00ff, #cc66ff);
-            border: none;
-            border-radius: 10px;
-            padding: 15px;
-            color: white;
-            font-size: 1.1rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            margin-top: 10px;
-        }
-
-        .calculator-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(170, 0, 255, 0.4);
-        }
-
-        .calculator-result {
-            background: rgba(0, 0, 0, 0.5);
-            border-radius: 10px;
-            padding: 25px;
-            border: 1px solid rgba(0, 255, 150, 0.3);
-            margin-top: 20px;
-        }
-
-        .result-title {
-            color: #00ffaa;
-            font-size: 1.3rem;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-
-        .result-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-        }
-
-        .result-item {
-            background: rgba(0, 30, 60, 0.4);
-            padding: 15px;
-            border-radius: 8px;
-            text-align: center;
-        }
-
-        .result-label {
-            color: #aaa;
-            font-size: 0.9rem;
-            margin-bottom: 5px;
-        }
-
-        .result-value {
-            color: #00ffaa;
-            font-size: 1.3rem;
-            font-weight: bold;
-        }
-
-        .result-value.profit {
-            color: #00ffaa;
-        }
-
-        .result-value.loss {
-            color: #ff5555;
-        }
-
-        .small-text {
-            font-size: 0.85rem;
-            color: #888;
-            font-style: italic;
-        }
-
         /* Stopka */
         footer {
             text-align: center;
@@ -426,18 +300,6 @@
             table {
                 min-width: 900px;
             }
-            
-            .calculator-form {
-                grid-template-columns: 1fr;
-            }
-            
-            .calculator-button {
-                grid-column: span 1;
-            }
-            
-            .result-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
         }
 
         @media (max-width: 768px) {
@@ -460,14 +322,6 @@
             
             table {
                 min-width: 950px;
-            }
-            
-            .calculator-container {
-                padding: 20px;
-            }
-            
-            .result-grid {
-                grid-template-columns: 1fr;
             }
         }
 
@@ -509,9 +363,6 @@
             </button>
             <button class="category-btn" data-section="lab">
                 <i class="fas fa-flask"></i> Laboratoria
-            </button>
-            <button class="category-btn" data-section="calculator">
-                <i class="fas fa-calculator"></i> Kalkulator
             </button>
         </div>
 
@@ -675,103 +526,6 @@
             </div>
         </section>
 
-        <!-- KALKULATOR -->
-        <section id="calculator" class="pricing-section">
-            <h2 class="section-title calculator"><i class="fas fa-calculator"></i> Kalkulator zysków z grama</h2>
-            <p class="section-description">
-                Oblicz potencjalne zyski z produkcji narkotyków. Wybierz substancję i ilość gramów.
-            </p>
-
-            <div class="calculator-container">
-                <div class="calculator-form">
-                    <div class="calculator-group">
-                        <label class="calculator-label">
-                            <i class="fas fa-capsules"></i> Rodzaj substancji
-                        </label>
-                        <select class="calculator-select" id="drugType">
-                            <optgroup label="Sadzonki">
-                                <option value="marihuana">🌿 Marihuana – standard</option>
-                                <option value="syntetyczna">🧪 Syntetyczna marihuana</option>
-                                <option value="haszysz">🍫 Haszysz – genetyka</option>
-                                <option value="cbd">🌱 CBD</option>
-                                <option value="ayahuasca">🍵 Ayahuasca</option>
-                            </optgroup>
-                            <optgroup label="Laboratoria">
-                                <option value="fentanyl">💉 Fentanyl</option>
-                                <option value="heroina">⚗️ Heroina</option>
-                                <option value="lsd">🌈 LSD</option>
-                                <option value="dmt">🌀 DMT</option>
-                                <option value="kokaina">❄️ Kokaina</option>
-                                <option value="metamfetamina">⚡ Metamfetamina</option>
-                                <option value="amfetamina">💊 Amfetamina</option>
-                                <option value="mdma">💎 MDMA</option>
-                                <option value="katynony">🧬 Syntetyczne katynony</option>
-                                <option value="psylocybina">🍄 Psylocybina</option>
-                                <option value="ketamina">🐴 Ketamina</option>
-                            </optgroup>
-                        </select>
-                    </div>
-
-                    <div class="calculator-group">
-                        <label class="calculator-label">
-                            <i class="fas fa-weight"></i> Ilość gramów do produkcji
-                        </label>
-                        <input type="number" class="calculator-input" id="gramCount" min="1" max="10000" value="100">
-                    </div>
-
-                    <div class="calculator-group">
-                        <label class="calculator-label">
-                            <i class="fas fa-dollar-sign"></i> Ilość sadzonek (opcjonalnie)
-                        </label>
-                        <input type="number" class="calculator-input" id="seedlingCount" min="1" max="1000" placeholder="Auto obliczenie">
-                        <small style="color: #888; font-size: 0.8rem;">Pozostaw puste dla automatycznego obliczenia</small>
-                    </div>
-
-                    <button class="calculator-button" id="calculateBtn">
-                        <i class="fas fa-calculator"></i> OBLICZ ZYSK Z GRAMA
-                    </button>
-                </div>
-
-                <div class="calculator-result" id="calculatorResult" style="display: none;">
-                    <h3 class="result-title">WYNIK KALKULACJI</h3>
-                    <div class="result-grid">
-                        <div class="result-item">
-                            <div class="result-label">Ilość potrzebnych sadzonek</div>
-                            <div class="result-value" id="neededSeedlings">0</div>
-                        </div>
-                        <div class="result-item">
-                            <div class="result-label">Koszt inwestycji</div>
-                            <div class="result-value" id="investmentCost">0 $</div>
-                        </div>
-                        <div class="result-item">
-                            <div class="result-label">Całkowity przychód</div>
-                            <div class="result-value" id="totalRevenue">0 $</div>
-                        </div>
-                        <div class="result-item">
-                            <div class="result-label">Zysk/Strata ogółem</div>
-                            <div class="result-value" id="totalProfit">0 $</div>
-                        </div>
-                        <div class="result-item">
-                            <div class="result-label">Zysk z 1g</div>
-                            <div class="result-value" id="profitPerGram">0 $</div>
-                        </div>
-                        <div class="result-item">
-                            <div class="result-label">Zysk z 5g</div>
-                            <div class="result-value" id="profitPer5g">0 $</div>
-                        </div>
-                        <div class="result-item">
-                            <div class="result-label">Zysk z 10g</div>
-                            <div class="result-value" id="profitPer10g">0 $</div>
-                        </div>
-                        <div class="result-item">
-                            <div class="result-label">Zysk z 50g</div>
-                            <div class="result-value" id="profitPer50g">0 $</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <footer>
             <div class="rp-notice">⚠ SYSTEM FIKCYJNY - CZĘŚĆ ŚWIATA GTA V ROLE PLAY</div>
             <p>Strona stworzona dla serwera Ławka RP. Wszystkie ceny podane w dolarach RP ($).</p>
@@ -780,124 +534,6 @@
     </div>
 
     <script>
-        // Dane dla kalkulatora
-        const drugData = {
-            // Sadzonki
-            "marihuana": {
-                name: "🌿 Marihuana – standard",
-                purchasePrice: 45000,
-                productionAmount: 5,
-                salePrice: 600,
-                unit: "g"
-            },
-            "syntetyczna": {
-                name: "🧪 Syntetyczna marihuana",
-                purchasePrice: 40000,
-                productionAmount: 5,
-                salePrice: 500,
-                unit: "g"
-            },
-            "haszysz": {
-                name: "🍫 Haszysz – genetyka",
-                purchasePrice: 65000,
-                productionAmount: 5,
-                salePrice: 1400,
-                unit: "g"
-            },
-            "cbd": {
-                name: "🌱 CBD",
-                purchasePrice: 30000,
-                productionAmount: 5,
-                salePrice: 400,
-                unit: "g"
-            },
-            "ayahuasca": {
-                name: "🍵 Ayahuasca",
-                purchasePrice: 70000,
-                productionAmount: 5,
-                salePrice: 3500,
-                unit: "g"
-            },
-            // Laboratoria
-            "fentanyl": {
-                name: "💉 Fentanyl",
-                purchasePrice: 85000,
-                productionAmount: 5,
-                salePrice: 6500,
-                unit: "g"
-            },
-            "heroina": {
-                name: "⚗️ Heroina",
-                purchasePrice: 78000,
-                productionAmount: 5,
-                salePrice: 5000,
-                unit: "g"
-            },
-            "lsd": {
-                name: "🌈 LSD",
-                purchasePrice: 70000,
-                productionAmount: 1,
-                salePrice: 550,
-                unit: "tab"
-            },
-            "dmt": {
-                name: "🌀 DMT",
-                purchasePrice: 82000,
-                productionAmount: 5,
-                salePrice: 13500,
-                unit: "g"
-            },
-            "kokaina": {
-                name: "❄️ Kokaina",
-                purchasePrice: 75000,
-                productionAmount: 5,
-                salePrice: 3250,
-                unit: "g"
-            },
-            "metamfetamina": {
-                name: "⚡ Metamfetamina",
-                purchasePrice: 73000,
-                productionAmount: 5,
-                salePrice: 2750,
-                unit: "g"
-            },
-            "amfetamina": {
-                name: "💊 Amfetamina",
-                purchasePrice: 72000,
-                productionAmount: 5,
-                salePrice: 2250,
-                unit: "g"
-            },
-            "mdma": {
-                name: "💎 MDMA",
-                purchasePrice: 68000,
-                productionAmount: 1,
-                salePrice: 220,
-                unit: "tab"
-            },
-            "katynony": {
-                name: "🧬 Syntetyczne katynony",
-                purchasePrice: 76000,
-                productionAmount: 5,
-                salePrice: 2500,
-                unit: "g"
-            },
-            "psylocybina": {
-                name: "🍄 Psylocybina",
-                purchasePrice: 80000,
-                productionAmount: 5,
-                salePrice: 5500,
-                unit: "g"
-            },
-            "ketamina": {
-                name: "🐴 Ketamina",
-                purchasePrice: 85000,
-                productionAmount: 5,
-                salePrice: 4250,
-                unit: "g"
-            }
-        };
-
         // Inicjalizacja
         document.addEventListener('DOMContentLoaded', function() {
             // Przełączanie sekcji
@@ -964,74 +600,6 @@
                     }
                 });
             }, 1500);
-            
-            // Obsługa kalkulatora
-            const calculateBtn = document.getElementById('calculateBtn');
-            const calculatorResult = document.getElementById('calculatorResult');
-            
-            calculateBtn.addEventListener('click', function() {
-                const drugType = document.getElementById('drugType').value;
-                const gramCount = parseInt(document.getElementById('gramCount').value);
-                const seedlingCountInput = document.getElementById('seedlingCount').value;
-                
-                if (isNaN(gramCount) || gramCount < 1) {
-                    alert('Podaj poprawną ilość gramów (minimum 1)');
-                    return;
-                }
-                
-                const drug = drugData[drugType];
-                
-                // Obliczanie ilości potrzebnych sadzonek
-                let seedlingCount;
-                if (seedlingCountInput && !isNaN(parseInt(seedlingCountInput)) && parseInt(seedlingCountInput) > 0) {
-                    // Jeśli użytkownik podał ilość sadzonek
-                    seedlingCount = parseInt(seedlingCountInput);
-                } else {
-                    // Automatyczne obliczenie ilości sadzonek na podstawie gramów
-                    seedlingCount = Math.ceil(gramCount / drug.productionAmount);
-                }
-                
-                // Obliczanie faktycznie wyprodukowanych gramów
-                const actualGrams = seedlingCount * drug.productionAmount;
-                
-                // Obliczenia
-                const investmentCost = drug.purchasePrice * seedlingCount;
-                const totalRevenue = drug.salePrice * seedlingCount;
-                const totalProfit = totalRevenue - investmentCost;
-                const profitPerGram = totalProfit / actualGrams;
-                const profitPer5g = profitPerGram * 5;
-                const profitPer10g = profitPerGram * 10;
-                const profitPer50g = profitPerGram * 50;
-                
-                // Formatowanie liczb
-                function formatNumber(num) {
-                    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
-                }
-                
-                function formatDecimal(num) {
-                    return num.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, " ");
-                }
-                
-                // Aktualizacja wyników
-                document.getElementById('neededSeedlings').textContent = formatNumber(seedlingCount);
-                document.getElementById('investmentCost').textContent = formatNumber(investmentCost) + ' $';
-                document.getElementById('totalRevenue').textContent = formatNumber(totalRevenue) + ' $';
-                document.getElementById('profitPerGram').textContent = formatDecimal(profitPerGram) + ' $';
-                document.getElementById('profitPer5g').textContent = formatDecimal(profitPer5g) + ' $';
-                document.getElementById('profitPer10g').textContent = formatDecimal(profitPer10g) + ' $';
-                document.getElementById('profitPer50g').textContent = formatDecimal(profitPer50g) + ' $';
-                
-                // Zysk/Strata ogółem z odpowiednim kolorem
-                const profitElement = document.getElementById('totalProfit');
-                profitElement.textContent = formatNumber(totalProfit) + ' $';
-                profitElement.className = 'result-value ' + (totalProfit >= 0 ? 'profit' : 'loss');
-                
-                // Pokaż wyniki
-                calculatorResult.style.display = 'block';
-                
-                // Animacja przewijania do wyników
-                calculatorResult.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            });
         });
     </script>
 </body>
