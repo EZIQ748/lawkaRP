@@ -130,11 +130,6 @@
             border-color: #00ccff;
         }
 
-        .section-title.upgrades {
-            color: #aa00ff;
-            border-color: #aa00ff;
-        }
-
         .section-description {
             color: #aaa;
             margin-bottom: 25px;
@@ -191,15 +186,6 @@
             border-bottom: 2px solid rgba(0, 200, 255, 0.3);
         }
 
-        .upgrades-table thead {
-            background: rgba(80, 0, 80, 0.7);
-        }
-
-        .upgrades-table th {
-            color: #aa00ff;
-            border-bottom: 2px solid rgba(170, 0, 255, 0.3);
-        }
-
         td {
             padding: 16px 15px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
@@ -215,10 +201,6 @@
 
         .lab-table tr:hover {
             background-color: rgba(0, 200, 255, 0.05);
-        }
-
-        .upgrades-table tr:hover {
-            background-color: rgba(170, 0, 255, 0.05);
         }
 
         .drug-name {
@@ -241,13 +223,6 @@
             text-shadow: 0 0 5px rgba(0, 200, 255, 0.5);
         }
 
-        .price-upgrade {
-            color: #aa00ff;
-            font-weight: bold;
-            font-size: 1.1rem;
-            text-shadow: 0 0 5px rgba(170, 0, 255, 0.5);
-        }
-
         .highlight {
             background-color: rgba(0, 100, 255, 0.1);
             color: #00ccff;
@@ -264,14 +239,6 @@
             font-size: 0.9rem;
         }
 
-        .highlight-upgrade {
-            background-color: rgba(170, 0, 255, 0.1);
-            color: #aa00ff;
-            padding: 3px 8px;
-            border-radius: 4px;
-            font-size: 0.9rem;
-        }
-
         .profit {
             color: #00ffaa;
             font-weight: bold;
@@ -279,11 +246,6 @@
 
         .profit-lab {
             color: #00ccff;
-            font-weight: bold;
-        }
-
-        .profit-upgrade {
-            color: #aa00ff;
             font-weight: bold;
         }
 
@@ -398,9 +360,6 @@
             <button class="category-btn" data-section="lab">
                 <i class="fas fa-flask"></i> Laboratoria
             </button>
-            <button class="category-btn" data-section="upgrades">
-                <i class="fas fa-tools"></i> Ulepszenia
-            </button>
         </div>
 
         <!-- SADZONKI - ZAKTUALIZOWANA WERSJA (5g) -->
@@ -470,7 +429,7 @@
         <section id="lab" class="pricing-section">
             <h2 class="section-title lab"><i class="fas fa-flask"></i> Laboratoria - cena za 5g/porcje</h2>
             <p class="section-description">
-                Syntezowane i przetwarzane substancje. Ceny detaliczne za 5 gramów lub porcje. Wyższe zyski ale większe ryzyko.
+                Syntezowane i przetwarzane substancje. Ceny za sadzonki (5 gramów lub porcje). Wyższe zyski ale większe ryzyko.
             </p>
 
             <div class="table-container">
@@ -478,7 +437,7 @@
                     <thead>
                         <tr>
                             <th>Narkotyk</th>
-                            <th>Cena detaliczna (5g/5szt)</th>
+                            <th>Cena sadzonki (5g/5szt)</th>
                             <th>Koszt produkcji (5g/5szt)</th>
                             <th>Zysk z 5g/5szt</th>
                             <th>Czas produkcji</th>
@@ -578,135 +537,6 @@
             *** Produkcja chemiczna wymaga specjalistycznego sprzętu i większych inwestycji</p>
         </section>
 
-        <!-- ULEPSZENIA -->
-        <section id="upgrades" class="pricing-section">
-            <h2 class="section-title upgrades"><i class="fas fa-tools"></i> Ulepszenia Laboratoriów</h2>
-            <p class="section-description">
-                Popraw efektywność, bezpieczeństwo i zyski z twojego laboratorium.
-            </p>
-
-            <h3 style="color: #aa00ff; margin: 30px 0 15px; font-size: 1.3rem;"><i class="fas fa-cogs"></i> Ulepszenia Wydajności</h3>
-            <div class="table-container">
-                <table class="upgrades-table">
-                    <thead>
-                        <tr>
-                            <th>Ulepszenie</th>
-                            <th>Cena</th>
-                            <th>Efekt</th>
-                            <th>Wymagania</th>
-                            <th>Miesięczny koszt</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="drug-name">System Filtracji</td>
-                            <td class="price-upgrade">60 000 $</td>
-                            <td>+5% czystości produktu</td>
-                            <td>Dowolne laboratorium</td>
-                            <td>4 000 $</td>
-                        </tr>
-                        <tr>
-                            <td class="drug-name">Automatyczny Mieszalnik</td>
-                            <td class="price-upgrade">100 000 $</td>
-                            <td>-10% czasu produkcji</td>
-                            <td>Laboratorium średnie lub większe</td>
-                            <td>8 000 $</td>
-                        </tr>
-                        <tr>
-                            <td class="drug-name">Zaawansowany Destylator</td>
-                            <td class="price-upgrade">200 000 $</td>
-                            <td>+25% wydajności produkcji</td>
-                            <td>Laboratorium premium</td>
-                            <td>20 000 $</td>
-                        </tr>
-                        <tr>
-                            <td class="drug-name">Generator Zapasowy</td>
-                            <td class="price-upgrade">75 000 $</td>
-                            <td>Ciągłość produkcji przy awariach</td>
-                            <td>Wszystkie typy laboratoriów</td>
-                            <td>6 000 $</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <h3 style="color: #aa00ff; margin: 30px 0 15px; font-size: 1.3rem;"><i class="fas fa-shield-alt"></i> Ulepszenia Bezpieczeństwa</h3>
-            <div class="table-container">
-                <table class="upgrades-table">
-                    <thead>
-                        <tr>
-                            <th>System Bezpieczeństwa</th>
-                            <th>Cena</th>
-                            <th>Efekt</th>
-                            <th>Wymagania</th>
-                            <th>Miesięczny koszt</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="drug-name">Monitoring CCTV</td>
-                            <td class="price-upgrade">50 000 $</td>
-                            <td>Wczesne wykrywanie zagrożeń</td>
-                            <td>Dowolne laboratorium</td>
-                            <td>3 200 $</td>
-                        </tr>
-                        <tr>
-                            <td class="drug-name">System Alarmowy</td>
-                            <td class="price-upgrade">75 000 $</td>
-                            <td>Automatyczne powiadomienia</td>
-                            <td>Laboratorium średnie lub większe</td>
-                            <td>4 800 $</td>
-                        </tr>
-                        <tr>
-                            <td class="drug-name">System Samoobrony</td>
-                            <td class="price-upgrade">160 000 $</td>
-                            <td>Automatyczna obrona przed najazdami</td>
-                            <td>Laboratorium premium</td>
-                            <td>14 000 $</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <h3 style="color: #aa00ff; margin: 30px 0 15px; font-size: 1.3rem;"><i class="fas fa-chart-line"></i> Ulepszenia Logistyczne</h3>
-            <div class="table-container">
-                <table class="upgrades-table">
-                    <thead>
-                        <tr>
-                            <th>System Logistyczny</th>
-                            <th>Cena</th>
-                            <th>Efekt</th>
-                            <th>Wymagania</th>
-                            <th>Miesięczny koszt</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="drug-name">System Zaopatrzenia</td>
-                            <td class="price-upgrade">40 000 $</td>
-                            <td>-10% kosztów surowców</td>
-                            <td>Dowolne laboratorium</td>
-                            <td>2 800 $</td>
-                        </tr>
-                        <tr>
-                            <td class="drug-name">Magazyn Chłodniczy</td>
-                            <td class="price-upgrade">180 000 $</td>
-                            <td>+30% pojemności magazynowej</td>
-                            <td>Laboratorium premium</td>
-                            <td>12 000 $</td>
-                        </tr>
-                        <tr>
-                            <td class="drug-name">System Zarządzania</td>
-                            <td class="price-upgrade">240 000 $</td>
-                            <td>+25% efektywności całego labu</td>
-                            <td>Laboratorium premium</td>
-                            <td>16 000 $</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
         <footer>
             <div class="rp-notice">⚠ SYSTEM FIKCYJNY - CZĘŚĆ ŚWIATA GTA V ROLE PLAY</div>
             <p>Strona stworzona dla serwera Ławka RP. Wszystkie ceny podane w dolarach RP ($).</p>
@@ -754,21 +584,19 @@
             
             // Efekt migania dla cen
             setInterval(() => {
-                const prices = document.querySelectorAll('.price, .profit, .price-upgrade, .price-lab, .profit-lab');
+                const prices = document.querySelectorAll('.price, .profit, .price-lab, .profit-lab');
                 prices.forEach(price => {
                     if (Math.random() > 0.97) {
                         let glowColor;
                         if (price.classList.contains('price-lab') || price.classList.contains('profit-lab')) {
                             glowColor = '#00ccff';
-                        } else if (price.classList.contains('price-upgrade') || price.classList.contains('profit-upgrade')) {
-                            glowColor = '#aa00ff';
                         } else {
                             glowColor = '#00ffaa';
                         }
                         
                         price.style.textShadow = `0 0 10px ${glowColor}, 0 0 20px ${glowColor}`;
                         setTimeout(() => {
-                            price.style.textShadow = `0 0 5px rgba(${glowColor === '#00ccff' ? '0, 204, 255' : glowColor === '#aa00ff' ? '170, 0, 255' : '0, 255, 170'}, 0.5)`;
+                            price.style.textShadow = `0 0 5px rgba(${glowColor === '#00ccff' ? '0, 204, 255' : '0, 255, 170'}, 0.5)`;
                         }, 300);
                     }
                 });
