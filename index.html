@@ -544,8 +544,8 @@
                 </div>
                 
                 <div class="calc-input-group">
-                    <label class="calc-label">Ilość cykli</label>
-                    <input type="number" id="cyclesCount" class="calc-input" value="3" min="1" max="100">
+                    <label class="calc-label">Ilość (gramy/porcje)</label>
+                    <input type="number" id="cyclesCount" class="calc-input" value="10" min="1" max="1000">
                 </div>
             </div>
             
@@ -561,7 +561,7 @@
                     </div>
                     
                     <div class="result-card">
-                        <div class="result-label">Przychód z 1 cyklu</div>
+                        <div class="result-label">Cena za 1g/porcję</div>
                         <div id="revenuePerCycle" class="result-value">0 $</div>
                     </div>
                     
@@ -571,8 +571,8 @@
                     </div>
                     
                     <div class="result-card">
-                        <div class="result-label">Zwrot inwestycji po</div>
-                        <div id="roiCycles" class="result-value">0 cyklach</div>
+                        <div class="result-label">Zysk netto</div>
+                        <div id="roiCycles" class="result-value">0 $</div>
                     </div>
                 </div>
             </div>
@@ -590,152 +590,151 @@
             </button>
         </div>
 
-        <!-- SADZONKI ROŚLINNE - Z TWOIMI CENAMI -->
+        <!-- SADZONKI ROŚLINNE - CENY ZA 1g -->
         <section id="plants" class="pricing-section active">
-            <h2 class="section-title plants"><i class="fas fa-seedling"></i> Sadzonki — roślinne</h2>
+            <h2 class="section-title plants"><i class="fas fa-seedling"></i> Sadzonki — roślinne (cena za 1g)</h2>
             <p class="section-description">
-                Marihuana i pochodne. Nieskończone = instalacja (zwrot ≈ po 3 zbiorach). 
-                Skończone = jednorazowy batch (zwrot po 1 zbiorze). <strong>500g produkcji = 500,000 $ przychodu</strong>
+                Marihuana i pochodne. Ceny detaliczne za 1 gram. Nieskończone = instalacja (zwrot ≈ po 3 zbiorach). 
+                Skończone = jednorazowy batch (zwrot po 1 zbiorze).
             </p>
 
-            <h3 class="sub-table-title plants"><i class="fas fa-infinity"></i> Nieskończone (uprawa)</h3>
+            <h3 class="sub-table-title plants"><i class="fas fa-infinity"></i> Nieskończone (uprawa) - Cena za 1g</h3>
             <div class="table-container">
                 <table class="plants-table">
                     <thead>
                         <tr>
                             <th>Narkotyk</th>
                             <th>Cena sadzonki</th>
-                            <th>Ilość / zbiór</th>
-                            <th>Cena sprzedaży</th>
-                            <th>Przychód z 500g</th>
-                            <th>Czas</th>
+                            <th>Produkcja / zbiór</th>
+                            <th>Cena detaliczna (1g)</th>
+                            <th>Zysk z 1g</th>
+                            <th>Czas na 1g</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td class="drug-name">🌿 Marihuana (naturalna)</td>
                             <td class="price">45 000 $</td>
-                            <td>500 g</td>
-                            <td>400 $/g</td>
-                            <td class="profit">200 000 $</td>
-                            <td class="time">48 min</td>
+                            <td>500 g / cykl</td>
+                            <td class="profit">400 $</td>
+                            <td class="profit">+390 $*</td>
+                            <td class="time">5.76 min</td>
                         </tr>
                         <tr>
                             <td class="drug-name">🧪 Syntetyczna marihuana</td>
                             <td class="price">55 000 $</td>
-                            <td>500 g</td>
-                            <td>200 $/g</td>
-                            <td class="profit">100 000 $</td>
-                            <td class="time">48 min</td>
+                            <td>500 g / cykl</td>
+                            <td class="profit">200 $</td>
+                            <td class="profit">+190 $*</td>
+                            <td class="time">5.76 min</td>
                         </tr>
                         <tr>
                             <td class="drug-name">🍫 Haszysz</td>
                             <td class="price">40 000 $</td>
-                            <td>500 g</td>
-                            <td>800 $/g</td>
-                            <td class="profit">400 000 $</td>
-                            <td class="time">48 min</td>
+                            <td>500 g / cykl</td>
+                            <td class="profit">800 $</td>
+                            <td class="profit">+790 $*</td>
+                            <td class="time">5.76 min</td>
                         </tr>
                         <tr>
                             <td class="drug-name">🌱 CBD (wysokie stężenie)</td>
                             <td class="price">35 000 $</td>
-                            <td>500 g</td>
-                            <td>300 $/g</td>
-                            <td class="profit">150 000 $</td>
-                            <td class="time">48 min</td>
+                            <td>500 g / cykl</td>
+                            <td class="profit">300 $</td>
+                            <td class="profit">+290 $*</td>
+                            <td class="time">5.76 min</td>
                         </tr>
                         <tr>
                             <td class="drug-name">🍵 Ayahuasca</td>
                             <td class="price">50 000 $</td>
-                            <td>1 porcja (50g)</td>
-                            <td>3 000 $/g</td>
-                            <td class="profit">150 000 $</td>
-                            <td class="time">48 min</td>
+                            <td>50 g / cykl</td>
+                            <td class="profit">3 000 $</td>
+                            <td class="profit">+2 950 $*</td>
+                            <td class="time">57.6 min</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
 
-            <h3 class="sub-table-title plants"><i class="fas fa-flag-checkered"></i> Skończone (jednorazowy batch)</h3>
+            <h3 class="sub-table-title plants"><i class="fas fa-flag-checkered"></i> Skończone (jednorazowy batch) - Cena za 1g</h3>
             <div class="table-container">
                 <table class="plants-table">
                     <thead>
                         <tr>
                             <th>Narkotyk</th>
-                            <th>Cena batch</th>
-                            <th>Ilość</th>
-                            <th>Przychód z 500g</th>
-                            <th>Zysk netto</th>
-                            <th>Czas</th>
+                            <th>Koszt 1g produkcji</th>
+                            <th>Cena detaliczna (1g)</th>
+                            <th>Zysk z 1g</th>
+                            <th>Minimalny batch</th>
+                            <th>Czas na 1g</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td class="drug-name">🌿 Marihuana (naturalna)</td>
-                            <td class="price">25 000 $</td>
-                            <td>500 g</td>
-                            <td class="profit">200 000 $</td>
-                            <td class="profit">+175 000 $</td>
-                            <td class="time">48 min</td>
+                            <td class="price">50 $</td>
+                            <td class="profit">400 $</td>
+                            <td class="profit">+350 $</td>
+                            <td>10 g</td>
+                            <td class="time">5.76 min</td>
                         </tr>
                         <tr>
                             <td class="drug-name">🧪 Syntetyczna marihuana</td>
-                            <td class="price">30 000 $</td>
-                            <td>500 g</td>
-                            <td class="profit">100 000 $</td>
-                            <td class="profit">+70 000 $</td>
-                            <td class="time">48 min</td>
+                            <td class="price">60 $</td>
+                            <td class="profit">200 $</td>
+                            <td class="profit">+140 $</td>
+                            <td>10 g</td>
+                            <td class="time">5.76 min</td>
                         </tr>
                         <tr>
                             <td class="drug-name">🍫 Haszysz</td>
-                            <td class="price">22 000 $</td>
-                            <td>500 g</td>
-                            <td class="profit">400 000 $</td>
-                            <td class="profit">+378 000 $</td>
-                            <td class="time">48 min</td>
+                            <td class="price">44 $</td>
+                            <td class="profit">800 $</td>
+                            <td class="profit">+756 $</td>
+                            <td>10 g</td>
+                            <td class="time">5.76 min</td>
                         </tr>
                         <tr>
                             <td class="drug-name">🌱 CBD (wysokie stężenie)</td>
-                            <td class="price">15 000 $</td>
-                            <td>500 g</td>
-                            <td class="profit">150 000 $</td>
-                            <td class="profit">+135 000 $</td>
-                            <td class="time">48 min</td>
+                            <td class="price">30 $</td>
+                            <td class="profit">300 $</td>
+                            <td class="profit">+270 $</td>
+                            <td>10 g</td>
+                            <td class="time">5.76 min</td>
                         </tr>
                         <tr>
                             <td class="drug-name">🍵 Ayahuasca</td>
-                            <td class="price">18 000 $</td>
-                            <td>1 porcja (50g)</td>
-                            <td class="profit">150 000 $</td>
-                            <td class="profit">+132 000 $</td>
-                            <td class="time">48 min</td>
+                            <td class="price">360 $</td>
+                            <td class="profit">3 000 $</td>
+                            <td class="profit">+2 640 $</td>
+                            <td>1 g</td>
+                            <td class="time">57.6 min</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-            <p class="small-text">* Ceny detaliczne: Marihuana 400$/g, Syntetyczna 200$/g, Haszysz 800$/g, CBD 300$/g, Ayahuasca 3000$/g<br>
-            ** Produkcja 500g = 500 sprzedaży detalicznych po 1g<br>
-            *** Haszysz jest najbardziej opłacalny z powodu wysokiej ceny detalicznej</p>
+            <p class="small-text">* Koszt amortyzacji sadzonki rozłożony na 100 cyklów (500g × 100 = 50,000g)<br>
+            ** Czas na 1g: 48 minut / 500g = 5.76 min/g (Ayahuasca: 48min / 50g = 57.6 min/g)<br>
+            *** Haszysz jest najbardziej opłacalny: 800$/g przy koszcie produkcji 44$/g</p>
         </section>
 
-        <!-- LABORATORIA CHEMICZNE - AKTUALIZOWANE -->
+        <!-- LABORATORIA CHEMICZNE - CENY ZA 1g -->
         <section id="lab" class="pricing-section">
-            <h2 class="section-title lab"><i class="fas fa-flask"></i> Laboratoria — chemia / synteza</h2>
+            <h2 class="section-title lab"><i class="fas fa-flask"></i> Laboratoria — chemia / synteza (cena za 1g/porcję)</h2>
             <p class="section-description">
-                Syntezowane i przetwarzane substancje. Nieskończone = stałe źródło (zwrot po 3 zbiorach). 
-                Skończone = pojedynczy batch (zwrot po 1 zbiorze). <strong>Wyższe ceny detaliczne niż roślinne.</strong>
+                Syntezowane i przetwarzane substancje. Ceny detaliczne za 1 gram lub porcję. Wyższe ceny ale większe ryzyko.
             </p>
 
-            <h3 class="sub-table-title"><i class="fas fa-infinity"></i> Nieskończone (instalacja lab)</h3>
+            <h3 class="sub-table-title"><i class="fas fa-infinity"></i> Nieskończone (instalacja lab) - Cena za 1g</h3>
             <div class="table-container">
                 <table>
                     <thead>
                         <tr>
                             <th>Narkotyk</th>
                             <th>Cena instalacji</th>
-                            <th>Ilość / zbiór</th>
+                            <th>Produkcja / cykl</th>
                             <th>Cena detaliczna</th>
-                            <th>Przychód z 500g</th>
+                            <th>Zysk z 1g/porcji*</th>
                             <th>Czas</th>
                         </tr>
                     </thead>
@@ -744,218 +743,219 @@
                             <td class="drug-name">💉 Fentanyl</td>
                             <td class="price">180 000 $</td>
                             <td>500 g</td>
-                            <td>1 200 $/g</td>
-                            <td class="profit">600 000 $</td>
-                            <td class="time">48 min</td>
+                            <td class="profit">1 200 $/g</td>
+                            <td class="profit">+1 164 $</td>
+                            <td class="time">5.76 min/g</td>
                         </tr>
                         <tr>
                             <td class="drug-name">⚗️ Heroina</td>
                             <td class="price">150 000 $</td>
                             <td>500 g</td>
-                            <td>900 $/g</td>
-                            <td class="profit">450 000 $</td>
-                            <td class="time">48 min</td>
+                            <td class="profit">900 $/g</td>
+                            <td class="profit">+864 $</td>
+                            <td class="time">5.76 min/g</td>
                         </tr>
                         <tr>
                             <td class="drug-name">🌈 LSD</td>
                             <td class="price">140 000 $</td>
                             <td>100 tabletek</td>
-                            <td>500 $/tab</td>
-                            <td class="profit">50 000 $</td>
-                            <td class="time">48 min</td>
+                            <td class="profit">500 $/tab</td>
+                            <td class="profit">+486 $</td>
+                            <td class="time">28.8 min/tab</td>
                         </tr>
                         <tr>
                             <td class="drug-name">🌀 DMT</td>
                             <td class="price">130 000 $</td>
                             <td>50 g</td>
-                            <td>2 500 $/g</td>
-                            <td class="profit">125 000 $</td>
-                            <td class="time">48 min</td>
+                            <td class="profit">2 500 $/g</td>
+                            <td class="profit">+2 436 $</td>
+                            <td class="time">57.6 min/g</td>
                         </tr>
                         <tr>
                             <td class="drug-name">❄️ Kokaina</td>
                             <td class="price">140 000 $</td>
                             <td>500 g</td>
-                            <td>600 $/g</td>
-                            <td class="profit">300 000 $</td>
-                            <td class="time">48 min</td>
+                            <td class="profit">600 $/g</td>
+                            <td class="profit">+564 $</td>
+                            <td class="time">5.76 min/g</td>
                         </tr>
                         <tr>
                             <td class="drug-name">⚡ Metamfetamina</td>
                             <td class="price">120 000 $</td>
                             <td>500 g</td>
-                            <td>500 $/g</td>
-                            <td class="profit">250 000 $</td>
-                            <td class="time">48 min</td>
+                            <td class="profit">500 $/g</td>
+                            <td class="profit">+464 $</td>
+                            <td class="time">5.76 min/g</td>
                         </tr>
                         <tr>
                             <td class="drug-name">💊 Amfetamina</td>
                             <td class="price">90 000 $</td>
                             <td>500 g</td>
-                            <td>400 $/g</td>
-                            <td class="profit">200 000 $</td>
-                            <td class="time">48 min</td>
+                            <td class="profit">400 $/g</td>
+                            <td class="profit">+364 $</td>
+                            <td class="time">5.76 min/g</td>
                         </tr>
                         <tr>
                             <td class="drug-name">💎 MDMA</td>
                             <td class="price">110 000 $</td>
                             <td>200 tabletek</td>
-                            <td>200 $/tab</td>
-                            <td class="profit">40 000 $</td>
-                            <td class="time">48 min</td>
+                            <td class="profit">200 $/tab</td>
+                            <td class="profit">+186 $</td>
+                            <td class="time">14.4 min/tab</td>
                         </tr>
                         <tr>
                             <td class="drug-name">🧬 Syntetyczne katynony</td>
                             <td class="price">100 000 $</td>
                             <td>500 g</td>
-                            <td>450 $/g</td>
-                            <td class="profit">225 000 $</td>
-                            <td class="time">48 min</td>
+                            <td class="profit">450 $/g</td>
+                            <td class="profit">+414 $</td>
+                            <td class="time">5.76 min/g</td>
                         </tr>
                         <tr>
                             <td class="drug-name">🍄 Psylocybina</td>
                             <td class="price">95 000 $</td>
                             <td>50 g</td>
-                            <td>1 000 $/g</td>
-                            <td class="profit">50 000 $</td>
-                            <td class="time">48 min</td>
+                            <td class="profit">1 000 $/g</td>
+                            <td class="profit">+936 $</td>
+                            <td class="time">57.6 min/g</td>
                         </tr>
                         <tr>
                             <td class="drug-name">🐴 Ketamina</td>
                             <td class="price">100 000 $</td>
                             <td>100 g</td>
-                            <td>800 $/g</td>
-                            <td class="profit">80 000 $</td>
-                            <td class="time">48 min</td>
+                            <td class="profit">800 $/g</td>
+                            <td class="profit">+736 $</td>
+                            <td class="time">28.8 min/g</td>
                         </tr>
                         <tr>
                             <td class="drug-name">🍵 Ayahuasca (lab)</td>
                             <td class="price">80 000 $</td>
                             <td>50 g</td>
-                            <td>3 000 $/g</td>
-                            <td class="profit">150 000 $</td>
-                            <td class="time">48 min</td>
+                            <td class="profit">3 000 $/g</td>
+                            <td class="profit">+2 936 $</td>
+                            <td class="time">57.6 min/g</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
 
-            <h3 class="sub-table-title"><i class="fas fa-flag-checkered"></i> Skończone (batch lab)</h3>
+            <h3 class="sub-table-title"><i class="fas fa-flag-checkered"></i> Skończone (batch lab) - Cena za 1g</h3>
             <div class="table-container">
                 <table>
                     <thead>
                         <tr>
                             <th>Narkotyk</th>
-                            <th>Cena batch</th>
-                            <th>Ilość</th>
-                            <th>Przychód</th>
-                            <th>Zysk netto</th>
-                            <th>Czas</th>
+                            <th>Koszt 1g produkcji</th>
+                            <th>Cena detaliczna</th>
+                            <th>Zysk z 1g/porcji</th>
+                            <th>Minimalny batch</th>
+                            <th>Czas na 1g</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td class="drug-name">💉 Fentanyl</td>
-                            <td class="price">60 000 $</td>
-                            <td>500 g</td>
-                            <td class="profit">600 000 $</td>
-                            <td class="profit">+540 000 $</td>
-                            <td class="time">48 min</td>
+                            <td class="price">120 $</td>
+                            <td class="profit">1 200 $/g</td>
+                            <td class="profit">+1 080 $</td>
+                            <td>10 g</td>
+                            <td class="time">5.76 min/g</td>
                         </tr>
                         <tr>
                             <td class="drug-name">⚗️ Heroina</td>
-                            <td class="price">50 000 $</td>
-                            <td>500 g</td>
-                            <td class="profit">450 000 $</td>
-                            <td class="profit">+400 000 $</td>
-                            <td class="time">48 min</td>
+                            <td class="price">100 $</td>
+                            <td class="profit">900 $/g</td>
+                            <td class="profit">+800 $</td>
+                            <td>10 g</td>
+                            <td class="time">5.76 min/g</td>
                         </tr>
                         <tr>
                             <td class="drug-name">🌈 LSD</td>
-                            <td class="price">55 000 $</td>
-                            <td>100 tabletek</td>
-                            <td class="profit">50 000 $</td>
-                            <td class="profit">-5 000 $</td>
-                            <td class="time">48 min</td>
+                            <td class="price">550 $</td>
+                            <td class="profit">500 $/tab</td>
+                            <td class="profit">-50 $</td>
+                            <td>10 tab</td>
+                            <td class="time">28.8 min/tab</td>
                         </tr>
                         <tr>
                             <td class="drug-name">🌀 DMT</td>
-                            <td class="price">65 000 $</td>
-                            <td>50 g</td>
-                            <td class="profit">125 000 $</td>
-                            <td class="profit">+60 000 $</td>
-                            <td class="time">48 min</td>
+                            <td class="price">1 300 $</td>
+                            <td class="profit">2 500 $/g</td>
+                            <td class="profit">+1 200 $</td>
+                            <td>5 g</td>
+                            <td class="time">57.6 min/g</td>
                         </tr>
                         <tr>
                             <td class="drug-name">❄️ Kokaina</td>
-                            <td class="price">45 000 $</td>
-                            <td>500 g</td>
-                            <td class="profit">300 000 $</td>
-                            <td class="profit">+255 000 $</td>
-                            <td class="time">48 min</td>
+                            <td class="price">90 $</td>
+                            <td class="profit">600 $/g</td>
+                            <td class="profit">+510 $</td>
+                            <td>10 g</td>
+                            <td class="time">5.76 min/g</td>
                         </tr>
                         <tr>
                             <td class="drug-name">⚡ Metamfetamina</td>
-                            <td class="price">40 000 $</td>
-                            <td>500 g</td>
-                            <td class="profit">250 000 $</td>
-                            <td class="profit">+210 000 $</td>
-                            <td class="time">48 min</td>
+                            <td class="price">80 $</td>
+                            <td class="profit">500 $/g</td>
+                            <td class="profit">+420 $</td>
+                            <td>10 g</td>
+                            <td class="time">5.76 min/g</td>
                         </tr>
                         <tr>
                             <td class="drug-name">💊 Amfetamina</td>
-                            <td class="price">30 000 $</td>
-                            <td>500 g</td>
-                            <td class="profit">200 000 $</td>
-                            <td class="profit">+170 000 $</td>
-                            <td class="time">48 min</td>
+                            <td class="price">60 $</td>
+                            <td class="profit">400 $/g</td>
+                            <td class="profit">+340 $</td>
+                            <td>10 g</td>
+                            <td class="time">5.76 min/g</td>
                         </tr>
                         <tr>
                             <td class="drug-name">💎 MDMA</td>
-                            <td class="price">35 000 $</td>
-                            <td>200 tabletek</td>
-                            <td class="profit">40 000 $</td>
-                            <td class="profit">+5 000 $</td>
-                            <td class="time">48 min</td>
+                            <td class="price">175 $</td>
+                            <td class="profit">200 $/tab</td>
+                            <td class="profit">+25 $</td>
+                            <td>10 tab</td>
+                            <td class="time">14.4 min/tab</td>
                         </tr>
                         <tr>
                             <td class="drug-name">🧬 Syntetyczne katynony</td>
-                            <td class="price">38 000 $</td>
-                            <td>500 g</td>
-                            <td class="profit">225 000 $</td>
-                            <td class="profit">+187 000 $</td>
-                            <td class="time">48 min</td>
+                            <td class="price">76 $</td>
+                            <td class="profit">450 $/g</td>
+                            <td class="profit">+374 $</td>
+                            <td>10 g</td>
+                            <td class="time">5.76 min/g</td>
                         </tr>
                         <tr>
                             <td class="drug-name">🍄 Psylocybina</td>
-                            <td class="price">25 000 $</td>
-                            <td>50 g</td>
-                            <td class="profit">50 000 $</td>
-                            <td class="profit">+25 000 $</td>
-                            <td class="time">48 min</td>
+                            <td class="price">500 $</td>
+                            <td class="profit">1 000 $/g</td>
+                            <td class="profit">+500 $</td>
+                            <td>5 g</td>
+                            <td class="time">57.6 min/g</td>
                         </tr>
                         <tr>
                             <td class="drug-name">🐴 Ketamina</td>
-                            <td class="price">45 000 $</td>
-                            <td>100 g</td>
-                            <td class="profit">80 000 $</td>
-                            <td class="profit">+35 000 $</td>
-                            <td class="time">48 min</td>
+                            <td class="price">450 $</td>
+                            <td class="profit">800 $/g</td>
+                            <td class="profit">+350 $</td>
+                            <td>10 g</td>
+                            <td class="time">28.8 min/g</td>
                         </tr>
                         <tr>
                             <td class="drug-name">🍵 Ayahuasca (lab)</td>
-                            <td class="price">22 000 $</td>
-                            <td>50 g</td>
-                            <td class="profit">150 000 $</td>
-                            <td class="profit">+128 000 $</td>
-                            <td class="time">48 min</td>
+                            <td class="price">440 $</td>
+                            <td class="profit">3 000 $/g</td>
+                            <td class="profit">+2 560 $</td>
+                            <td>5 g</td>
+                            <td class="time">57.6 min/g</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-            <p class="small-text">* Laboratoria dają wyższe zyski ale też wymagają większych inwestycji<br>
-            ** Fentanyl i Heroina są najbardziej opłacalne z powodu wysokich cen detalicznych<br>
-            *** Produkcja chemiczna jest bardziej ryzykowna ale daje większe zyski</p>
+            <p class="small-text">* Koszt amortyzacji instalacji rozłożony na 100 cyklów<br>
+            ** Czas na 1g: 48 minut ÷ ilość produkcji = czas na jednostkę<br>
+            *** Ayahuasca (lab) i DMT są najbardziej opłacalne chemicznie<br>
+            **** LSD jest nieopłacalne w batch'u - tylko do produkcji na zamówienie</p>
         </section>
 
         <!-- ULEPSZENIA -->
@@ -1175,52 +1175,52 @@
     </div>
 
     <script>
-        // Zaktualizowane dane dla kalkulatora - TWOJE CENY
+        // Zaktualizowane dane dla kalkulatora - CENY ZA 1g
         const drugData = {
             plants: {
                 infinite: {
-                    marihuana: { investment: 45000, revenue: 200000, unit: "500 g" },
-                    synthetic_marihuana: { investment: 55000, revenue: 100000, unit: "500 g" },
-                    haszysz: { investment: 40000, revenue: 400000, unit: "500 g" },
-                    cbd: { investment: 35000, revenue: 150000, unit: "500 g" },
-                    ayahuasca: { investment: 50000, revenue: 150000, unit: "50 g" }
+                    marihuana: { investment: 45000, revenue: 400, unit: "1 g" },
+                    synthetic_marihuana: { investment: 55000, revenue: 200, unit: "1 g" },
+                    haszysz: { investment: 40000, revenue: 800, unit: "1 g" },
+                    cbd: { investment: 35000, revenue: 300, unit: "1 g" },
+                    ayahuasca: { investment: 50000, revenue: 3000, unit: "1 g" }
                 },
                 finite: {
-                    marihuana: { investment: 25000, revenue: 200000, unit: "500 g" },
-                    synthetic_marihuana: { investment: 30000, revenue: 100000, unit: "500 g" },
-                    haszysz: { investment: 22000, revenue: 400000, unit: "500 g" },
-                    cbd: { investment: 15000, revenue: 150000, unit: "500 g" },
-                    ayahuasca: { investment: 18000, revenue: 150000, unit: "50 g" }
+                    marihuana: { investment: 50, revenue: 400, unit: "1 g" },
+                    synthetic_marihuana: { investment: 60, revenue: 200, unit: "1 g" },
+                    haszysz: { investment: 44, revenue: 800, unit: "1 g" },
+                    cbd: { investment: 30, revenue: 300, unit: "1 g" },
+                    ayahuasca: { investment: 360, revenue: 3000, unit: "1 g" }
                 }
             },
             lab: {
                 infinite: {
-                    fentanyl: { investment: 180000, revenue: 600000, unit: "500 g" },
-                    heroina: { investment: 150000, revenue: 450000, unit: "500 g" },
-                    lsd: { investment: 140000, revenue: 50000, unit: "100 tab" },
-                    dmt: { investment: 130000, revenue: 125000, unit: "50 g" },
-                    kokaina: { investment: 140000, revenue: 300000, unit: "500 g" },
-                    metamfetamina: { investment: 120000, revenue: 250000, unit: "500 g" },
-                    amfetamina: { investment: 90000, revenue: 200000, unit: "500 g" },
-                    mdma: { investment: 110000, revenue: 40000, unit: "200 tab" },
-                    katynony: { investment: 100000, revenue: 225000, unit: "500 g" },
-                    psylocybina: { investment: 95000, revenue: 50000, unit: "50 g" },
-                    ketamina: { investment: 100000, revenue: 80000, unit: "100 g" },
-                    ayahuasca: { investment: 80000, revenue: 150000, unit: "50 g" }
+                    fentanyl: { investment: 180000, revenue: 1200, unit: "1 g" },
+                    heroina: { investment: 150000, revenue: 900, unit: "1 g" },
+                    lsd: { investment: 140000, revenue: 500, unit: "1 tab" },
+                    dmt: { investment: 130000, revenue: 2500, unit: "1 g" },
+                    kokaina: { investment: 140000, revenue: 600, unit: "1 g" },
+                    metamfetamina: { investment: 120000, revenue: 500, unit: "1 g" },
+                    amfetamina: { investment: 90000, revenue: 400, unit: "1 g" },
+                    mdma: { investment: 110000, revenue: 200, unit: "1 tab" },
+                    katynony: { investment: 100000, revenue: 450, unit: "1 g" },
+                    psylocybina: { investment: 95000, revenue: 1000, unit: "1 g" },
+                    ketamina: { investment: 100000, revenue: 800, unit: "1 g" },
+                    ayahuasca: { investment: 80000, revenue: 3000, unit: "1 g" }
                 },
                 finite: {
-                    fentanyl: { investment: 60000, revenue: 600000, unit: "500 g" },
-                    heroina: { investment: 50000, revenue: 450000, unit: "500 g" },
-                    lsd: { investment: 55000, revenue: 50000, unit: "100 tab" },
-                    dmt: { investment: 65000, revenue: 125000, unit: "50 g" },
-                    kokaina: { investment: 45000, revenue: 300000, unit: "500 g" },
-                    metamfetamina: { investment: 40000, revenue: 250000, unit: "500 g" },
-                    amfetamina: { investment: 30000, revenue: 200000, unit: "500 g" },
-                    mdma: { investment: 35000, revenue: 40000, unit: "200 tab" },
-                    katynony: { investment: 38000, revenue: 225000, unit: "500 g" },
-                    psylocybina: { investment: 25000, revenue: 50000, unit: "50 g" },
-                    ketamina: { investment: 45000, revenue: 80000, unit: "100 g" },
-                    ayahuasca: { investment: 22000, revenue: 150000, unit: "50 g" }
+                    fentanyl: { investment: 120, revenue: 1200, unit: "1 g" },
+                    heroina: { investment: 100, revenue: 900, unit: "1 g" },
+                    lsd: { investment: 550, revenue: 500, unit: "1 tab" },
+                    dmt: { investment: 1300, revenue: 2500, unit: "1 g" },
+                    kokaina: { investment: 90, revenue: 600, unit: "1 g" },
+                    metamfetamina: { investment: 80, revenue: 500, unit: "1 g" },
+                    amfetamina: { investment: 60, revenue: 400, unit: "1 g" },
+                    mdma: { investment: 175, revenue: 200, unit: "1 tab" },
+                    katynony: { investment: 76, revenue: 450, unit: "1 g" },
+                    psylocybina: { investment: 500, revenue: 1000, unit: "1 g" },
+                    ketamina: { investment: 450, revenue: 800, unit: "1 g" },
+                    ayahuasca: { investment: 440, revenue: 3000, unit: "1 g" }
                 }
             }
         };
@@ -1228,25 +1228,25 @@
         // Opcje narkotyków dla selecta
         const drugOptions = {
             plants: [
-                { value: 'marihuana', label: '🌿 Marihuana (500g)' },
-                { value: 'synthetic_marihuana', label: '🧪 Syntetyczna Marihuana (500g)' },
-                { value: 'haszysz', label: '🍫 Haszysz (500g)' },
-                { value: 'cbd', label: '🌱 CBD (500g)' },
-                { value: 'ayahuasca', label: '🍵 Ayahuasca (50g)' }
+                { value: 'marihuana', label: '🌿 Marihuana (1g = 400$)' },
+                { value: 'synthetic_marihuana', label: '🧪 Syntetyczna Marihuana (1g = 200$)' },
+                { value: 'haszysz', label: '🍫 Haszysz (1g = 800$)' },
+                { value: 'cbd', label: '🌱 CBD (1g = 300$)' },
+                { value: 'ayahuasca', label: '🍵 Ayahuasca (1g = 3,000$)' }
             ],
             lab: [
-                { value: 'fentanyl', label: '💉 Fentanyl (500g)' },
-                { value: 'heroina', label: '⚗️ Heroina (500g)' },
-                { value: 'lsd', label: '🌈 LSD (100 tab)' },
-                { value: 'dmt', label: '🌀 DMT (50g)' },
-                { value: 'kokaina', label: '❄️ Kokaina (500g)' },
-                { value: 'metamfetamina', label: '⚡ Metamfetamina (500g)' },
-                { value: 'amfetamina', label: '💊 Amfetamina (500g)' },
-                { value: 'mdma', label: '💎 MDMA (200 tab)' },
-                { value: 'katynony', label: '🧬 Syntetyczne Katynony (500g)' },
-                { value: 'psylocybina', label: '🍄 Psylocybina (50g)' },
-                { value: 'ketamina', label: '🐴 Ketamina (100g)' },
-                { value: 'ayahuasca', label: '🍵 Ayahuasca (50g)' }
+                { value: 'fentanyl', label: '💉 Fentanyl (1g = 1,200$)' },
+                { value: 'heroina', label: '⚗️ Heroina (1g = 900$)' },
+                { value: 'lsd', label: '🌈 LSD (1 tab = 500$)' },
+                { value: 'dmt', label: '🌀 DMT (1g = 2,500$)' },
+                { value: 'kokaina', label: '❄️ Kokaina (1g = 600$)' },
+                { value: 'metamfetamina', label: '⚡ Metamfetamina (1g = 500$)' },
+                { value: 'amfetamina', label: '💊 Amfetamina (1g = 400$)' },
+                { value: 'mdma', label: '💎 MDMA (1 tab = 200$)' },
+                { value: 'katynony', label: '🧬 Syntetyczne Katynony (1g = 450$)' },
+                { value: 'psylocybina', label: '🍄 Psylocybina (1g = 1,000$)' },
+                { value: 'ketamina', label: '🐴 Ketamina (1g = 800$)' },
+                { value: 'ayahuasca', label: '🍵 Ayahuasca (1g = 3,000$)' }
             ]
         };
 
@@ -1277,7 +1277,7 @@
             const productionType = document.getElementById('productionType').value;
             const drugType = document.getElementById('drugType').value;
             const investmentType = document.getElementById('investmentType').value;
-            const cyclesCount = parseInt(document.getElementById('cyclesCount').value);
+            const quantity = parseInt(document.getElementById('cyclesCount').value);
             
             const data = drugData[productionType][investmentType][drugType];
             
@@ -1286,21 +1286,16 @@
                 return;
             }
             
-            const initialInvestment = data.investment;
-            const revenuePerCycle = data.revenue;
-            const totalRevenue = revenuePerCycle * cyclesCount;
-            
-            // Oblicz zwrot inwestycji
-            let roiCycles = 0;
-            if (revenuePerCycle > 0) {
-                roiCycles = Math.ceil(initialInvestment / revenuePerCycle);
-            }
+            const initialInvestment = data.investment * quantity;
+            const revenuePerUnit = data.revenue;
+            const totalRevenue = revenuePerUnit * quantity;
+            const netProfit = totalRevenue - initialInvestment;
             
             // Aktualizuj wyniki
             document.getElementById('investmentCost').textContent = formatCurrency(initialInvestment);
-            document.getElementById('revenuePerCycle').textContent = formatCurrency(revenuePerCycle);
+            document.getElementById('revenuePerCycle').textContent = formatCurrency(revenuePerUnit) + ` za ${data.unit}`;
             document.getElementById('totalRevenue').textContent = formatCurrency(totalRevenue);
-            document.getElementById('roiCycles').textContent = `${roiCycles} cyklach`;
+            document.getElementById('roiCycles').textContent = formatCurrency(netProfit);
             
             // Pokaż wyniki
             document.getElementById('calcResults').classList.add('active');
